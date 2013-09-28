@@ -1,0 +1,75 @@
+/* Element Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "sans-serif";
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Georgia", "serif";
+  font-weight: lighter;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Object Styles */
+.inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-list > li {
+  margin: 0;
+  padding: 0 30px 0 0;
+  display: inline-block;
+}
+
+/* Page Layout */
+.page-header {
+  padding: 20px 0;
+  background: orange;
+  box-shadow: 0 -2px 10px 2px gray;
+}
+
+.page-header-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 0;
+  padding: 0;
+}
+
+
+.page-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.page-footer {
+
+}
+
+/* Module Styles */
+.news-post {
+  margin: 40px 0;
+}
+
+.news-title {
+  margin: 0;
+}
+
+.news-author {
+  display: inline-block;
+  margin: 0;
+  padding-right: 20px;
+}

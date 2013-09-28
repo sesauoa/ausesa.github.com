@@ -3,8 +3,10 @@ layout: default
 title: SESA - News
 ---
 
-{% for article in paginator.posts %}
-  {% include article.html %}
-{% endfor %}
+<section class="posts">
+    {% for article in paginator.posts %}
+      {% include article.html %}
+    {% endfor %}
 
-{% include paginator.html %}
+    {% include paginator.html %}
+</section>

@@ -17,10 +17,10 @@ h1 { font-size: 48px; }
 h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 
-section {
+/*section {
   margin-bottom: 40px;
 }
-
+*/
 a {
   color: #FF9900;
   text-decoration: none;
@@ -140,12 +140,17 @@ a:hover {
 }
 
 /* News Post */
+.news-more {
+  display: block;
+  padding-bottom: 30px;
+}
+
 .news-post {
   margin: 10px 0 40px 0;
 }
 
 .news-title {
-  margin: 0;
+  margin: 20px 0 10px 0;
 }
 
 .news-author {

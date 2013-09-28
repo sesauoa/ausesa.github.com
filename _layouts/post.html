@@ -2,15 +2,17 @@
 layout: default
 ---
 
-{% assign article = page %}
-{% include article.html %}
+<section class="post">
+    {% assign article = page %}
+    {% include article.html %}
 
-<div class="pagination">
-    {% if page.next != nil %}
-        <a href="{{ page.next.url }}" class="next"><i class="icon-arrow-left"></i> {{ page.next.title }}</i></a>
-    {% endif %}
+    <div class="pagination">
+        {% if page.next != nil %}
+            <a href="{{ page.next.url }}" class="next"><i class="icon-arrow-left"></i> {{ page.next.title }}</i></a>
+        {% endif %}
 
-    {% if page.previous != nil %}
-        <a href="{{ page.previous.url }}" class="previous">{{ page.previous.title }} <i class="icon-arrow-right"></i></a>
-    {% endif %}
-</div>
+        {% if page.previous != nil %}
+            <a href="{{ page.previous.url }}" class="previous">{{ page.previous.title }} <i class="icon-arrow-right"></i></a>
+        {% endif %}
+    </div>
+</section>

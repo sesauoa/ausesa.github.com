@@ -153,3 +153,13 @@ a:hover {
   margin: 0;
   padding-right: 20px;
 }
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pagination a, span {
+  padding: 0 50px;
+}

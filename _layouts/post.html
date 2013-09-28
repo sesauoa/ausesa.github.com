@@ -1,8 +1,16 @@
 ---
 layout: default
 ---
+
 {% assign article = page %}
 {% include article.html %}
 
-<a href="{{ page.previous.url }}">next</a>
-<a href="{{ page.next.url }}">previous</a>
+<div class="pagination">
+    {% if page.previous != nil %}
+        <a href="{{ page.previous.url }}" class="previous"><i class="icon-arrow-left"></i> {{ page.previous.title }}</a>
+    {% endif %}
+
+    {% if page.next != nil %}
+        <a href="{{ page.next.url }}" class="next">{{ page.next.title }} <i class="icon-arrow-right"></i></a>
+    {% endif %}
+</div>

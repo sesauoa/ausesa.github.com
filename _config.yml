@@ -1,5 +1,5 @@
 name: Software Engineering Student's Association
 markdown: redcarpet
 pygments: true
-paginate: 5
+paginate: 2
 paginate_path: "news/page:num"

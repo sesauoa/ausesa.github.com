@@ -1,22 +1,34 @@
 /* Element Styles */
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", "sans-serif";
+  font-family: 'PT Sans', sans-serif;
+  color: #333333;
+  line-height: 1.8;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Georgia", "serif";
+  font-family: 'Exo', sans-serif;
   font-weight: lighter;
 }
 
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+
+section {
+  margin-bottom: 40px;
+}
+
 a {
-  color: green;
+  color: #FF9900;
   text-decoration: none;
+  transition: text-shadow 0.2s;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 1px darkorange;
 }
 
 /* Object Styles */
@@ -28,40 +40,108 @@ a:hover {
 
 .inline-list > li {
   margin: 0;
-  padding: 0 30px 0 0;
+  padding: 0 65px 0 0;
   display: inline-block;
 }
 
 /* Page Layout */
-.page-header {
-  padding: 20px 0;
-  background: orange;
-  box-shadow: 0 -2px 10px 2px gray;
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
-.page-header-wrapper {
+.page-header {
+  /*background: #333333;*/
+}
+
+.page-header-titles {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.page-navigation {
+  padding: 10px 0;
+  background: #333333;
+  box-shadow: 0 2px 1px gray;
+}
+
+.page-navigation > ul {
   width: 960px;
   margin: 0 auto;
 }
 
-.page-title {
-  margin: 0;
-  padding: 0;
+.page-icon {
+  display: inline-block;
+  background: #333333;
+  border-radius: 5px;
+  height: 100px;
+  padding: 10px;
 }
 
+.page-title {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 30px 0 0;
+  padding: 0;
+  font-size: 80px;
+}
+
+.page-subtitle {
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
 
 .page-content {
   width: 960px;
   margin: 0 auto;
+  padding: 0 0 58px 0;
 }
 
 .page-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 0;
+  background: #333333;
+}
 
+.page-footer-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.about {
+  width: 450px;
+  margin-right: 55px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.join {
+  width: 450px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 /* Module Styles */
+/* Page Section */
+.section-title {
+  margin: 20px 0 10px 0;
+}
+
+/* Page Nav */
+.page-navigation {
+  font-size: 1.2em;
+}
+
+/* News Post */
 .news-post {
-  margin: 40px 0;
+  margin: 10px 0 40px 0;
 }
 
 .news-title {

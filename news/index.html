@@ -1,0 +1,10 @@
+---
+layout: default
+title: SESA - News
+---
+
+{% for article in paginator.posts %}
+  {% include article.html %}
+{% endfor %}
+
+{% include paginator.html %}

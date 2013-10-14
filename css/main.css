@@ -64,6 +64,7 @@ a:hover {
   padding: 10px 0;
   background: #333333;
   box-shadow: 0 2px 1px gray;
+  font-family: 'Exo', sans-serif;
 }
 
 .page-navigation > ul {

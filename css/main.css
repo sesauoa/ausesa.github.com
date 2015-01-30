@@ -3,13 +3,13 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #333333;
   line-height: 1.8;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Exo', sans-serif;
+  font-family: 'Gotham Narrow', 'Lato', sans-serif;
   font-weight: lighter;
 }
 
@@ -69,7 +69,7 @@ a:hover {
   padding: 10px 0;
   background: #333333;
   box-shadow: 0 2px 1px gray;
-  font-family: 'Exo', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .page-navigation > ul {

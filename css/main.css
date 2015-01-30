@@ -17,12 +17,17 @@ h1 { font-size: 48px; }
 h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 
+/* Logo */
+img#logo {
+	height: 1em;
+}
+
 /*section {
   margin-bottom: 40px;
 }
 */
 a {
-  color: #FF9900;
+  color: #038FB1;
   text-decoration: none;
   transition: text-shadow 0.2s;
 }

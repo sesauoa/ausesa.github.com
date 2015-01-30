@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 1px darkorange;
+  text-shadow: 0 0 1px #00B3FF;
 }
 
 /* Object Styles */

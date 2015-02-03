@@ -9,7 +9,7 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Exo', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: lighter;
 }
 
@@ -64,7 +64,7 @@ a:hover {
   padding: 10px 0;
   background: #333333;
   box-shadow: 0 2px 1px gray;
-  font-family: 'Exo', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .page-navigation > ul {

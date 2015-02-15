@@ -3,13 +3,13 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #333333;
   line-height: 1.8;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Gotham Narrow', 'Lato', sans-serif;
   font-weight: lighter;
 }
 
@@ -17,18 +17,23 @@ h1 { font-size: 48px; }
 h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 
+/* Logo */
+img#logo {
+	height: 1em;
+}
+
 /*section {
   margin-bottom: 40px;
 }
 */
 a {
-  color: #FF9900;
+  color: #038FB1;
   text-decoration: none;
   transition: text-shadow 0.2s;
 }
 
 a:hover {
-  text-shadow: 0 0 1px darkorange;
+  text-shadow: 0 0 1px #00B3FF;
 }
 
 /* Object Styles */
@@ -64,7 +69,7 @@ a:hover {
   padding: 10px 0;
   background: #333333;
   box-shadow: 0 2px 1px gray;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .page-navigation > ul {
@@ -77,7 +82,7 @@ a:hover {
   background: #333333;
   border-radius: 5px;
   height: 100px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .page-title {

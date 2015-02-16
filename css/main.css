@@ -18,8 +18,14 @@ h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 
 /* Logo */
-img#logo {
-	height: 1em;
+#logo {
+	display: inline-block;
+	text-indent: -9999px;
+	width: 146px;
+	height: 80px;
+	background-image: url('../img/SESALogoNoText.png');
+	background-image: url('../img/SESALogoNoText.svg'), none;
+	background-size: 146px 80px;
 }
 
 /*section {

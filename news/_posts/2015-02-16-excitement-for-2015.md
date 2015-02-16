@@ -2,8 +2,7 @@
 layout: post
 title:  "Excitement for 2015"
 author: Saren Currie
-date:   2015-02-16
-13:05:27
+date:   2015-02-16 13:05:00
 ---
 
 As the start of uni approaches, SESA has heaps of exciting news for the upcoming year.

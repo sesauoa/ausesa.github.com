@@ -3,7 +3,7 @@ Software Engineering Students' Association Website, http://sesa.org.nz/
 
 ## To run locally
 
-Install Jekyll
+Install [Jekyll](http://jekyllrb.com)
 
     gem install jekyll
 

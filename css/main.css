@@ -140,6 +140,55 @@ a:hover {
   vertical-align: top;
 }
 
+/* Sponsor box */
+div.sponsors-wrapper {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	background-color: #333333;
+}
+
+section.sponsors {
+	width: 1200px;
+	margin: 0 auto;
+	height: 290px;
+}
+
+.sponsors-title {
+	margin: 0;
+}
+
+div.sponsor {
+	display: inline-block;
+}
+
+div.sponsor:not(:last-child) {
+	margin-right: 30px;
+}
+
+div.sponsor.silver {
+	position: absolute;
+	right: 0;
+	top: 87px;
+}
+
+div.sponsor > p {
+	margin: 0;
+	text-align: center;
+	color: white;
+}
+
+img.sponsor-logo {
+	vertical-align: text-top;
+	height: 180px;
+	width: 180px;
+}
+
+section.news {
+	margin-top: 310px;
+}
+
 /* Module Styles */
 /* Page Section */
 .section-title {

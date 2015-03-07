@@ -164,7 +164,13 @@ div.sponsor {
 }
 
 div.sponsor:not(:last-child) {
-	margin-right: 70px;
+	margin-right: 30px;
+}
+
+div.sponsor.silver {
+	position: absolute;
+	right: 0;
+	top: 87px;
 }
 
 div.sponsor > p {

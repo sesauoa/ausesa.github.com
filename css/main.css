@@ -167,10 +167,8 @@ div.sponsor:not(:last-child) {
 	margin-right: 30px;
 }
 
-div.sponsor.silver {
-	position: absolute;
-	right: 0;
-	top: 87px;
+div.sponsor.gold {
+	margin-right: 137px;
 }
 
 div.sponsor > p {

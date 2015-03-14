@@ -140,6 +140,12 @@ a:hover {
   vertical-align: top;
 }
 
+/* Module Styles */
+/* Page Section */
+.section-title {
+  margin: 20px 0 10px 0;
+}
+
 /* Sponsor box */
 div.sponsors-wrapper {
 	position: absolute;
@@ -156,7 +162,7 @@ section.sponsors {
 }
 
 .sponsors-title {
-	margin: 0;
+	margin: 20px 0 -10px 0;
 }
 
 div.sponsor {
@@ -185,12 +191,6 @@ img.sponsor-logo {
 
 section.news {
 	margin-top: 310px;
-}
-
-/* Module Styles */
-/* Page Section */
-.section-title {
-  margin: 20px 0 10px 0;
 }
 
 /* Page Nav */

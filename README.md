@@ -1,5 +1,5 @@
 # ausesa.github.com
-Software Engineering Students' Association Website, http://sesa.org.nz/
+Software Engineering Students Association Website, http://sesa.org.nz/
 
 ## To run locally
 

@@ -147,7 +147,7 @@ a:hover {
 }
 
 /* Sponsor box */
-div.sponsors-wrapper {
+div.patrons-wrapper {
 	position: absolute;
 	display: block;
 	left: 0;
@@ -155,35 +155,35 @@ div.sponsors-wrapper {
 	background-color: #333333;
 }
 
-section.sponsors {
+section.patrons {
 	width: 1200px;
 	margin: 0 auto;
 	height: 290px;
 }
 
-.sponsors-title {
+.patrons-title {
 	margin: 20px 0 -10px 0;
 }
 
-div.sponsor {
+div.patron {
 	display: inline-block;
 }
 
-div.sponsor:not(:last-child) {
+div.patron:not(:last-child) {
 	margin-right: 30px;
 }
 
-div.sponsor.gold {
+div.patron.gold {
 	margin-right: 137px;
 }
 
-div.sponsor > p {
+div.patron > p {
 	margin: 0;
 	text-align: center;
 	color: white;
 }
 
-img.sponsor-logo {
+img.patron-logo {
 	vertical-align: text-top;
 	height: 180px;
 	width: 180px;

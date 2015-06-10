@@ -218,6 +218,13 @@ section.news {
   padding-right: 20px;
 }
 
+/* Contacts page */
+ul.contact-list > li {
+	display: block;
+	margin: 20px 0px;
+	font-size: 15pt;
+}
+
 /* Pagination */
 .pagination {
   text-align: center;

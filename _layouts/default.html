@@ -18,7 +18,42 @@
     <body>
       <div class="wrapper">
         {% include header.html %}
+	    <nav class="page-navigation">
+	      <ul class="page-navigation-links inline-list">
+	        <li><a href="/news"><i class="fa fa-th-large"></i> News</a></li>
+	        <li><a href="/join"><i class="fa fa-circle"></i> Join</a></li>
+	        <li><a href="/opportunities"><i class="fa fa-briefcase"></i> Opportunities</a></li>
+	        <li><a href="/events"><i class="fa fa-calendar"></i> Events</a></li>
+	        <li><a href="/contact"><i class="fa fa-envelope"></i> Contact Us</a></li>
+	        <li><a href="https://docs.google.com/a/aucklanduni.ac.nz/document/d/13e_HGS0YkJ0NPy5i9pqJNruYMGXN5_Kylfwe4TDP_eQ/">
+	          <i class="fa fa-bookmark"></i> Student Links</a>
+	        </li>
+	      </ul>
 
+		  <section class="patrons">
+		  	<h2 class="section-title patrons-title"><a name=patrons href="#patrons">Gold Sponsors</a></h2>
+		  	<div class="patron gold">
+		  		<div class="patron" id="orion">
+		  			<a href="https://www.orionhealth.com/nz/careers/"><img class="patron-logo" src="img/orion.svg"></img></a>
+		  		</div>
+		  		<div class="patron" id="vista">
+		  			<a href="http://www.vista.co/en/careers/"><img class="patron-logo" src="img/vista.svg"></img></a>
+		  		</div>
+		  	</div>
+			<h3 class="section-title patrons-title"><a name=patrons href="#patrons">Silver Sponsors</a></h2>
+		  	<div class="patron silver">
+		  		<div class="patron" id="atlassian">
+		  			<a href="https://www.atlassian.com/company/careers"><img class="patron-logo" src="img/atlassian.svg"></img></a>
+		  		</div>
+		  		<div class="patron" id="microsoft"><em></em>
+		  			<a href="http://careers.microsoft.com/careers/en/nz/home.aspx"><img class="patron-logo" src="img/microsoft.svg"></img></a>
+		  		</div>
+		  		<div class="patron" id="xero">
+		  			<a href="https://www.xero.com/nz/about/careers/"><img class="patron-logo" src="img/xero.svg"></img></a>
+		  		</div>
+		  	</div>
+		  </section>
+	    </nav>
         <div class="page-content">
           {{ content }}
         </div>

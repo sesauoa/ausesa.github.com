@@ -232,7 +232,7 @@ ul.page-navigation-links li i {
 
 ul.page-navigation-links li {
 	display: block;
-	font-size: 18pt;
+	font-weight: lighter;
 	padding-left: 10px;
 	background: #333333;
 	border: none;
@@ -241,7 +241,8 @@ ul.page-navigation-links li {
 
 .menu-button {
 	display: block;
-	font-size: 18pt;
+	font-weight: lighter;
+	font-size: 24pt;
 	padding-left: 10px;
 	background: #333333;
 	border: none;
@@ -271,6 +272,15 @@ ul.page-navigation-links li:hover,
 	.page-content {
 		margin-left: 0px;
 	}
+
+	ul.page-navigation-links li {
+		font-size: 22pt;
+		line-height: 2;
+	}
+
+	ul.page-navigation-links li i {
+		width: 30px;
+	}
 }
 
 @media (min-width: 601px) {
@@ -283,11 +293,20 @@ ul.page-navigation-links li:hover,
 	}
 
 	#mobile_menu {
-		display: none;
+		display: none !important;
 	}
 
 	.page-content {
 		margin-left: 250px;
+	}
+
+	ul.page-navigation-links li {
+		font-size: 18pt;
+		line-height: 1.8;
+	}
+
+	ul.page-navigation-links li i {
+		width: 24px;
 	}
 }
 

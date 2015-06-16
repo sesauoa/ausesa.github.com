@@ -76,19 +76,16 @@ section > * {
 	margin: 20px;
 	padding: 0;
 	font-size: 80px;
+	line-height: 1.0;
 	z-index: 1;
 }
 
 /* Logo */
 #logo {
 	display: inline-block;
-	text-indent: -9999px;
 	width: 146px;
 	height: 80px;
-	background-image: url('../img/SESALogoNoText.png');
-	background-image: url('../img/SESALogoNoText.svg'), none;
 	background-size: 146px 80px;
-	content: ''; /* Workaround for "empty image" issue */
 }
 
 #banner_image {

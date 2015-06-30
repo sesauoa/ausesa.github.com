@@ -35,11 +35,14 @@ section {
 }
 
 /* Column display */
-.column {
-	width: 49%;
+@media (min-width: 1025px) {
+	.column {
+		width: 49%;
+		max-width: 650px;
+	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 	.column {
 		width: 100%;
 	}
@@ -312,13 +315,12 @@ ul.page-navigation-links li:hover,
 	padding: 20px 50px;
 	box-sizing: border-box;
 	vertical-align: top;
-	max-width: 600px;
 }
 
 @media (max-width: 800px) {
 	.post {
 		padding: 20px 20px;
-}
+	}
 }
 
 /* No size change for nested posts */

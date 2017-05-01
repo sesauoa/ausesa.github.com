@@ -4,7 +4,7 @@ $(document).ready(function() {
   });
 
   var i = 0;
-  var TOTAL_BANNERS = 5;
+  var TOTAL_BANNERS = 10;
   setInterval(function () {
   if (i >= TOTAL_BANNERS) {
 	  i = 0;

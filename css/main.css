@@ -366,15 +366,21 @@ ul.page-navigation-links li:hover,
 	text-align: center;
 }
 
+.patron.silver .patron {
+	height: 80px;
+}
+
 .patron.gold img.patron-logo {
-	vertical-align: text-top;
-	height: 125px;
+	vertical-align: middle;
+	margin-bottom: 25px;
 }
 
 .patron.silver img.patron-logo {
-	vertical-align: text-top;
-	height: 80px;
+	vertical-align: middle;
 	width: 80px;
+	/* Height fixed to 60 to prevent square logos from being OP */
+	height: 60px;
+	object-fit: contain;
 }
 
 .patron.silver img.patron-logo:first-child {

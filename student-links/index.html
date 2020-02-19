@@ -1,0 +1,17 @@
+---
+layout: default
+title: SESA - Student Links
+---
+<iframe id="google-doc-iframe" src="https://docs.google.com/document/d/e/2PACX-1vRXliCDTJ-eRWvWrd_OOwbD7Q8qYkquesqH-I_SQNCqps7DPFRhA6XaSYNwyacnc_FpH0RUCN8bZk3Z/pub?embedded=true" width="100%" height="1500px" frameborder="0" marginheight="0" marginwidth="0" style="padding:20px 0">Loading...</iframe>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$.get("https://docs.google.com/document/d/2PACX-1vRXliCDTJ-eRWvWrd_OOwbD7Q8qYkquesqH-I_SQNCqps7DPFRhA6XaSYNwyacnc_FpH0RUCN8bZk3Z/pub?embedded=true", function(html) {
+		$("#google-doc-iframe").attr("srcdoc", html);
+		setTimeout(function() {
+			$("#google-doc-iframe").contents().find('a[href^="http://"]').attr("target", "_blank");
+			$("#google-doc-iframe").contents().find('a[href^="https://"]').attr("target", "_blank");
+		}, 1000);
+	});
+});
+</script>

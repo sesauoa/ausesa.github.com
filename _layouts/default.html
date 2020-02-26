@@ -28,48 +28,8 @@
 				<a href="/contact"><li><i class="fa fa-envelope"></i> Contact Us</li></a>
 				<a href="/student-links"><li><i class="fa fa-bookmark"></i> Student Links</li></a>
 			</ul>
-
-			<section class="patrons">
-				<h2 class="section-title patrons-title"><a name=patrons href="#patrons">Gold Sponsors</a></h2>
-				<div class="patron gold">
-					<div class="patron" id="serato-logo">
-						<a href="https://serato.com/careers"><img style="fill: white" class="patron-logo" width="80%" src="/img/sponsors/serato.png" alt="Serato Logo"/></a>
-					</div>
-					<div class="patron" id="softtech-logo">
-						<a href="https://softtech.com/careers/"><img class="patron-logo" width="80%" src="/img/sponsors/softtech.png" alt="SoftTech Logo"/></a>
-					</div>
-				</div>
-				<h3 class="section-title patrons-title"><a name=patrons href="#patrons">Silver Sponsors</a></h3>
-				<div class="patron silver">
-					<div class="patron" id="datacom-logo">
-						<a href="https://datacom.co.nz/Careers/Hiring-Now.aspx"><img class="patron-logo" src="/img/sponsors/datacom.png" alt="Datacom Logo"/></a>
-					</div>
-					<div class="patron" id="eroad-logo">
-						<a href="http://careers.eroad.com/careers/"><img class="patron-logo" src="/img/sponsors/eroad.png" alt="EROAD Logo"/></a>
-					</div>
-					<div class="patron" id="gentrack-logo">
-						<a href="https://www.gentrack.com/careers/"><img class="patron-logo" src="/img/sponsors/gentrack.png" alt="Gentrack Logo"/></a>
-					</div>
-					<div class="patron" id="kami-logo">
-						<a href="https://www.kamiapp.com/careers/"><img class="patron-logo" src="/img/sponsors/kami.png" alt="Kami Logo"/></a>
-					</div>
-					<div class="patron" id="vista-logo">
-						<a href="http://www.vista.co/en/careers/"><img class="patron-logo" src="/img/sponsors/vista.png" alt="Vista Logo"/></a>
-					</div>
-					<div class="patron" id="xero-logo">
-						<a href="https://www.xero.com/nz/about/careers/openings/"><img class="patron-logo" src="/img/sponsors/xero.png" alt="Xero Logo"/></a>
-					</div>
-					<div class="patron" id="atlassian-logo">
-						<a href="http://atlassian.com/company/careers/students"><img class="patron-logo" src="/img/sponsors/atlassian.png" alt="Atlassian Logo"/></a>
-					</div>
-					<div class="patron" id="sandfield-logo">
-						<a href="http://sandfield.co.nz/Careers"><img class="patron-logo" src="/img/sponsors/sandfield.png" alt="Sandfield Logo"/></a>
-					</div>
-					<div class="patron" id="ecoportal-logo">
-						<a href="https://www.ecoportal.com/"><img class="patron-logo" src="/img/sponsors/ecoportal.png" alt="EcoPortal Logo"/></a>
-					</div>
-				</div>
-			</section>
+			{% assign mobile="false" %}
+			{% include sponsors.html mobile=mobile%}
 		</nav>
 		<div class="page-content">
 			<div id="menu_button" class="menu-button mobile">
@@ -88,47 +48,8 @@
 				</ul>
 			</div>
 			{{ content }}
-			<section class="patrons mobile">
-				<h2 class="section-title patrons-title"><a name=patrons href="#patrons">Gold Sponsors</a></h2>
-				<div class="patron gold">
-					<div class="patron" id="serato-logo">
-						<a href="https://serato.com/careers"><img style="fill: white" class="patron-logo" width="50%" src="/img/sponsors/serato.png" alt="Serato Logo"/></a>
-					</div>
-					<div class="patron" id="softtech-logo">
-						<a href="https://softtech.com/careers/"><img class="patron-logo" width="50%" src="/img/sponsors/softtech.png" alt="SoftTech Logo"/></a>
-					</div>
-				</div>
-				<h3 class="section-title patrons-title"><a name=patrons href="#patrons">Silver Sponsors</a></h3>
-				<div class="patron silver">
-					<div class="patron" id="datacom-logo">
-						<a href="https://datacom.co.nz/Careers/Hiring-Now.aspx"><img class="patron-logo" src="/img/sponsors/datacom.png" alt="Datacom Logo"/></a>
-					</div>
-					<div class="patron" id="eroad-logo">
-						<a href="http://careers.eroad.com/careers/"><img class="patron-logo" src="/img/sponsors/eroad.png" alt="EROAD Logo"/></a>
-					</div>
-					<div class="patron" id="gentrack-logo">
-						<a href=https://www.gentrack.com/careers/"><img class="patron-logo" src="/img/sponsors/gentrack.png" alt="Gentrack Logo"/></a>
-					</div>
-					<div class="patron" id="kami-logo">
-						<a href="https://www.kamiapp.com/careers/"><img class="patron-logo" src="/img/sponsors/kami.png" alt="Kami Logo"/></a>
-					</div>
-					<div class="patron" id="vista-logo">
-						<a href="http://www.vista.co/en/careers/"><img class="patron-logo" src="/img/sponsors/vista.png" alt="Vista Logo"/></a>
-					</div>
-					<div class="patron" id="xero-logo">
-						<a href="https://www.xero.com/nz/about/careers/openings/"><img class="patron-logo" src="/img/sponsors/xero.png" alt="Xero Logo"/></a>
-					</div>
-					<div class="patron" id="atlassian-logo">
-						<a href="http://atlassian.com/company/careers/students"><img class="patron-logo" src="/img/sponsors/atlassian.png" alt="Atlassian Logo"/></a>
-					</div>
-					<div class="patron" id="sandfield-logo">
-						<a href="http://sandfield.co.nz/Careers"><img class="patron-logo" src="/img/sponsors/sandfield.png" alt="Sandfield Logo"/></a>
-					</div>
-					<div class="patron" id="ecoportal-logo">
-						<a href="https://www.ecoportal.com/"><img class="patron-logo" src="/img/sponsors/ecoportal.png" alt="EcoPortal Logo"/></a>
-					</div>
-				</div>
-			</section>
+			{% assign mobile="true" %}
+			{% include sponsors.html mobile=mobile %}
 		</div>
 
 		{% include footer.html %}

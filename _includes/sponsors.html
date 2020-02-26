@@ -1,0 +1,42 @@
+{% if mobile == "true" %}
+	{% assign goldWidth = "50%" %}
+	{% assign mobileTag = " mobile" %}
+{% else %}
+	{% assign goldWidth = "80%" %}
+	{% assign mobileTag = "" %}
+{% endif %}
+<section class="patrons{{ mobileTag }}">
+	<h2 class="section-title patrons-title"><a name=patrons href="#patrons">Gold Sponsors</a></h2>
+	<div class="patron gold">
+		<div class="patron" id="ecoportal-logo">
+			<a href="https://www.ecoportal.com/"><img style="fill: white" class="patron-logo" width="{{ goldWidth }}" src="/img/sponsors/ecoportal.png" alt="EcoPortal Logo"/></a>
+		</div>
+		<div class="patron" id="honeywell-logo">
+			<a href="https://careers.honeywell.com/us/en"><img class="patron-logo" width="{{ goldWidth }}" src="/img/sponsors/honeywell.png" alt="HoneyWell Logo"/></a>
+		</div>
+	</div>
+	<h3 class="section-title patrons-title"><a name=patrons href="#patrons">Silver Sponsors</a></h3>
+	<div class="patron silver">
+		<div class="patron" id="atlassian-logo">
+			<a href="http://atlassian.com/company/careers/students"><img class="patron-logo" src="/img/sponsors/atlassian.png" alt="Atlassian Logo"/></a>
+		</div>
+		<div class="patron" id="imc-logo">
+			<a href="https://careers.imc.com/ap/en"><img class="patron-logo" src="/img/sponsors/imc.png" alt="IMC Trading Logo"/></a>
+		</div>
+		<div class="patron" id="janestreet-logo">
+			<a href="http://careers.eroad.com/careers/"><img class="patron-logo" src="/img/sponsors/janestreet.png" alt="Jane Street Logo"/></a>
+		</div>
+		<div class="patron" id="orionhealth-logo">
+			<a href="https://orionhealth.com/nz/careers/"><img class="patron-logo" src="/img/sponsors/orionhealth.png" alt="Orion Health Logo"/></a>
+		</div>
+		<div class="patron" id="sandfield-logo">
+			<a href="http://sandfield.co.nz/Careers"><img class="patron-logo" src="/img/sponsors/sandfield.png" alt="Sandfield Logo"/></a>
+		</div>
+		<div class="patron" id="serato-logo">
+			<a href="https://serato.com/careers"><img class="patron-logo" src="/img/sponsors/serato.png" alt="Serato Logo"/></a>
+		</div>
+		<div class="patron" id="vista-logo">
+			<a href="http://www.vista.co/en/careers/"><img class="patron-logo" src="/img/sponsors/vista.png" alt="Vista Logo"/></a>
+		</div>
+	</div>
+</section>

@@ -421,3 +421,8 @@ ul.contact-list > li {
 .pagination a, span {
 	padding: 0 50px;
 }
+
+.responsive {
+width: 100%;
+height: auto;
+}

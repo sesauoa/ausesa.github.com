@@ -1,33 +1,47 @@
 /* Element Styles */
-html, body {
+html,
+body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	color: #333333;
 	background: #333333;
 	line-height: 1.8;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Gotham Narrow', 'Lato', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Gotham Narrow", "Lato", sans-serif;
 	font-weight: 300;
 }
 
-h1 { font-size: 48px; }
-h2 { font-size: 32px; }
-h3 { font-size: 24px; }
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 24px;
+}
 
-p {text-align: justify;}
+p {
+	text-align: justify;
+}
 
 a {
-	color: #038FB1;
+	color: #038fb1;
 	text-decoration: none;
 	transition: text-shadow 0.2s;
 }
 
 a:hover {
-	text-shadow: 0 0 1px #00B3FF;
+	text-shadow: 0 0 1px #00b3ff;
 }
 
 section {
@@ -73,7 +87,7 @@ section {
 	margin: 20px;
 	padding: 0;
 	font-size: 80px;
-	line-height: 1.0;
+	line-height: 1;
 	z-index: 1;
 }
 
@@ -110,9 +124,9 @@ section {
 	}
 
 	#logo {
-			width: 73px;
-			height: 40px;
-			background-size: 73px 40px;
+		width: 73px;
+		height: 40px;
+		background-size: 73px 40px;
 	}
 }
 
@@ -130,9 +144,9 @@ section {
 	}
 
 	#logo {
-			width: 108px;
-			height: 60px;
-			background-size: 108px 60px;
+		width: 108px;
+		height: 60px;
+		background-size: 108px 60px;
 	}
 }
 
@@ -150,9 +164,9 @@ section {
 	}
 
 	#logo {
-			width: 146px;
-			height: 80px;
-			background-size: 146px 80px;
+		width: 146px;
+		height: 80px;
+		background-size: 146px 80px;
 	}
 }
 
@@ -170,9 +184,9 @@ section {
 	}
 
 	#logo {
-			width: 146px;
-			height: 80px;
-			background-size: 146px 80px;
+		width: 146px;
+		height: 80px;
+		background-size: 146px 80px;
 	}
 }
 
@@ -190,9 +204,9 @@ section {
 	}
 
 	#logo {
-			width: 146px;
-			height: 80px;
-			background-size: 146px 80px;
+		width: 146px;
+		height: 80px;
+		background-size: 146px 80px;
 	}
 }
 
@@ -212,7 +226,7 @@ section {
 /* Page Nav */
 .page-navigation {
 	background: #333333;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	width: 250px;
 	float: left;
 	overflow: none;
@@ -250,7 +264,7 @@ ul.page-navigation-links li:hover,
 
 .page-content {
 	margin-left: 250px;
-	background-color: #EEEEEE;
+	background-color: #eeeeee;
 }
 
 /* Changes menu style on small screens */
@@ -400,7 +414,6 @@ ul.page-navigation-links li:hover,
 	margin: 0 15px;
 }
 
-
 /* Contacts page */
 ul.contact-list {
 	padding-bottom: 20px;
@@ -418,11 +431,12 @@ ul.contact-list > li {
 	margin-bottom: 30px;
 }
 
-.pagination a, span {
+.pagination a,
+span {
 	padding: 0 50px;
 }
 
 .responsive {
-	width: 100%;
+	width: 75%;
 	height: auto;
 }

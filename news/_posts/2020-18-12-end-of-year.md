@@ -7,11 +7,11 @@ date: 18/12/2020
 
 <img src="/img/posts/end-of-year-2020.jpg" alt="SESA Mixer" class="responsive">
 
-Hi everyone, its the end of the year, and I'd just like to make a wrap-up post to cap off this crazy year.
+Hi everyone, it's the end of the year, and I'd just like to make a wrap-up post to cap off this crazy year.
 
 ## Lockdown
 
-This year, we had to do a lot of things differently because of lockdowns. Social events such as games nights and pub quizzes somehow had to be held online. Our industry events such as speed interviews was held completely online and CV checking was partially online.
+This year, we had to do a lot of things differently because of lockdowns. Social events such as games nights and pub quizzes somehow had to be held online. Our industry events such as speed interviews were held completely online and CV checking was partially online.
 
 Our exec have learnt a lot from these experiences and hope to carry forth some ideas from these events, such as online game nights, and allowing overseas sponsors to participate in our industry events without needing to be present in person.
 
@@ -46,10 +46,10 @@ Our exec have learnt a lot from these experiences and hope to carry forth some i
 
 ## Exec
 
-Therefore, I'd like to thank all the members of the SESA exec for 2021
+Therefore, I'd like to thank all the members of the SESA exec for 2020
 
 -   President: Timo Van Veenendaal
--   Vice President: Nisarah Bhatt
+-   Vice President: Nisarag Bhatt
 -   Secretary: Alex Verkerk
 -   Treasurer: Sreeniketh Raghavan
 -   Part 2 Representative: Jiaru Lin
@@ -64,7 +64,7 @@ Therefore, I'd like to thank all the members of the SESA exec for 2021
 
 ## Sponsors
 
-We'd like to give a shoutout to our sponsors for making all out events possible this year and supporting our club!!
+We'd like to give a shoutout to our sponsors for making all our events possible this year and supporting our club!!
 
 ### Our Gold sponsors
 

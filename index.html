@@ -13,66 +13,63 @@ title: SESA - Home
   </head>
   <body>
     <main>
-        <!-- Main Splash and Header -->
-        <header class="section">
-            <p>Splash</p> 
-        </header>
+      <!-- Main Splash and Header -->
+      <header class="section">
+        <p>Splash</p>
+      </header>
 
-        <!-- Sponsors Section -->
-        <section class="section">
-            <p>Sponsors</p>
-        </section>
+      <!-- Sponsors Section -->
+      <section class="section">
+        <p>Sponsors</p>
+      </section>
 
-        <!-- Body -->
-        <section class="section">
-            <section class="column post about">
-                <h2 class="section-title about-title">
-                  <a name="about" href="#about">About SESA</a>
-                </h2>
-                <p>
-                  SESA is the Software Engineering Students Association for students and
-                  alumni of the Software Engineering programme at the
-                  <a href="https://auckland.ac.nz">University of Auckland</a>. We organise and
-                  run events for members such as LAN parties, shadow classes, and careers
-                  evenings.
-                </p>
-                <p>
-                  Where necessary we also act as a liaison between the department and the SE
-                  students, raising any relevant issues (course content, difficulties in
-                  learning).
-                </p>
-              </section>
-              
-              <section class="column post join">
-                <h2 class="section-title join-title">
-                  <a name="join" href="#join">How to Join</a>
-                </h2>
-                <p>
-                  To join SESA, fill out <a href="/join">this form</a>. Joining is 100% free.
-                  Follow the instructions on the form to become a member, even if you did this
-                  last year. Membership doesn't roll over so you need to fill out this form
-                  each year!
-                </p>
-                <p>
-                  Once you have filled out the form, don't forget to join the
-                  <a href="https://www.facebook.com/groups/ausesa/">Facebook Group</a>, where
-                  most of our discussion happens!
-                </p>
-              </section>
-              
-              <section class="post news-post">
-                <h2 class="section-title news-title">
-                  <a name="news" href="#news">Latest News</a>
-                </h2>
-                {% assign article = site.posts.first %} {% include article.html %}
-              
-                <a class="news-more" href="/news"
-                  >More news <i class="fa fa-arrow-right"></i
-                ></a>
-              </section>              
-        </section>
+      <!-- Body -->
+      <section class="section">
+        <div class="body-container">
+          <section>
+            <h2 >
+              <a class="section-title" name="about" href="#about">About SESA</a>
+            </h2>
+            <p>
+              SESA is the Software Engineering Students Association for students and alumni of the Software Engineering
+              programme at the
+              <a href="https://auckland.ac.nz">University of Auckland</a>. We organise and run events for members such
+              as career workshops, game nights, and industry talks with our sponsors.
+            </p>
+            <p>
+              Where necessary we also act as a liaison between the department and the SOFTENG students, raising any
+              relevant issues (course content, difficulties in learning).
+            </p>
+          </section>
 
-        {% include footer.html %}
+          <section class="column post join">
+            <h2 class="section-title">
+              <a name="join" href="#join">How to Join</a>
+            </h2>
+            <p>
+              To join SESA, fill out <a href="/join">this form</a>. Joining is 100% free. Follow the instructions on the
+              form to become a member, even if you did this last year. Membership doesn't roll over so you need to fill
+              out this form each year!
+            </p>
+            <p>
+              Once you have filled out the form, don't forget to join the
+              <a href="https://www.facebook.com/groups/ausesa/">Facebook Group</a>, where most of our discussion
+              happens!
+            </p>
+          </section>
+
+          <!-- <section class="post news-post">
+            <h2 class="section-title news-title">
+              <a name="news" href="#news">Latest News</a>
+            </h2>
+            {% assign article = site.posts.first %} {% include article.html %}
+
+            <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
+          </section> -->
+        </div>
+      </section>
+
+      {% include footer.html %}
     </main>
   </body>
 </html>

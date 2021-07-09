@@ -1,13 +1,30 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Remove underline from links
+a {
+  text-decoration: none;
 }
 
 .section {
-	
+}
+
+.section-title {
+  color: #49bfaa;
+}
+
+.section-title > a {
+  color: #49bfaa;
+}
+
+.body-container {
+  display: flex;
+  gap: 8px;
 }

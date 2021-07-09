@@ -30,9 +30,14 @@ a:hover {
 
 .body-container {
   display: flex;
-  gap: 80px;
-  padding: 0 24px;
+  justify-content: space-evenly;
+  gap: 2em;
   flex-wrap: wrap;
+
+  .column {
+    min-width: 320px;
+    width: 40%;
+  }
 }
 
 .post {
@@ -64,9 +69,4 @@ a:hover {
       background-color: darken($sesa-teal-dark, 10%);
     }
   }
-}
-
-.column {
-  min-width: 320px;
-  max-width: 400px;
 }

@@ -8,9 +8,18 @@
   padding: 0;
 }
 
+body {
+  font-family: "Overpass", sans-serif;
+}
+
 // Remove underline from links
 a {
   text-decoration: none;
+  color: #49bfaa;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .section {
@@ -20,11 +29,19 @@ a {
   color: #49bfaa;
 }
 
-.section-title > a {
-  color: #49bfaa;
-}
-
 .body-container {
   display: flex;
-  gap: 8px;
+  gap: 80px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
+
+.column-post {
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.column-post > p {
+  text-align: justify;
+  padding-top: 1em;
 }

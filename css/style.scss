@@ -3,6 +3,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
+$sesa-teal-dark: #49bfaa;
+$sesa-teal-light: #70c7b0;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,7 @@ body {
 // Remove underline from links
 a {
   text-decoration: none;
-  color: #49bfaa;
+  color: $sesa-teal-dark;
 }
 
 a:hover {
@@ -25,10 +28,6 @@ a:hover {
 .section {
 }
 
-.section-title {
-  color: #49bfaa;
-}
-
 .body-container {
   display: flex;
   gap: 80px;
@@ -36,12 +35,38 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.column-post {
-  min-width: 320px;
-  max-width: 400px;
+.post {
+  .title {
+    padding-bottom: 0.5em;
+    color: $sesa-teal-dark;
+  }
+
+  p {
+    text-align: justify;
+    padding-bottom: 1em;
+  }
+
+  button {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 8px 32px;
+    background-color: $sesa-teal-light;
+    border: 0;
+    border-radius: 12px;
+    outline: none;
+    color: white;
+
+    &:hover {
+      background-color: $sesa-teal-dark;
+    }
+
+    &:active {
+      background-color: darken($sesa-teal-dark, 10%);
+    }
+  }
 }
 
-.column-post > p {
-  text-align: justify;
-  padding-top: 1em;
+.column {
+  min-width: 320px;
+  max-width: 400px;
 }

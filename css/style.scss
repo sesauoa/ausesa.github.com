@@ -5,6 +5,7 @@
 
 $sesa-teal-dark: #49bfaa;
 $sesa-teal-light: #70c7b0;
+$sesa-navy: #30455c;
 
 * {
   margin: 0;
@@ -68,5 +69,47 @@ a:hover {
     &:active {
       background-color: darken($sesa-teal-dark, 10%);
     }
+  }
+}
+
+.footer {
+  $footer-vertical-padding: 1em;
+  background-color: $sesa-navy;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: $footer-vertical-padding 0;
+
+  a {
+    color: white;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    padding-top: $footer-vertical-padding;
+    img {
+      width: 80px;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4em;
+    flex-wrap: wrap;
+    gap: $footer-vertical-padding;
+  }
+}
+
+.inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0 1em 0 0;
+    display: inline-block;
   }
 }

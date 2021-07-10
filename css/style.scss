@@ -8,6 +8,7 @@ $light-blue: #70c7b0;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .splash-header {
@@ -22,14 +23,21 @@ $light-blue: #70c7b0;
   font-family: Overpass;
 
   .splash-container {
+    padding: 30px 160px;
+    max-width: 1920px;
+    left: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+
     .splash-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 60px 140px;
 
       .logo {
-        height: 100px;
+        height: 80px;
       }
 
       .nav-bar {
@@ -43,15 +51,15 @@ $light-blue: #70c7b0;
           white-space: nowrap;
           cursor: pointer;
           text-decoration: none;
-          font-size: 1.4rem;
+          font-size: 1.1rem;
 
           .join {
             background-color: $light-blue;
-            padding: 10px 25px;
+            padding: 10px 25px 8px 25px;
             border-radius: 30px;
-            transition: ease-in-out 0.2s;
 
             &:hover {
+              transition: ease-in 0.2s;
               transform: scale(1.05);
             }
           }
@@ -76,42 +84,151 @@ $light-blue: #70c7b0;
             width: 100%;
           }
         }
+
+        .mobile-exit {
+          margin-bottom: 10px;
+          width: 30px;
+          height: 30px;
+          display: none;
+          cursor: pointer;
+
+          .line {
+            width: inherit;
+            background-color: white;
+            height: 2px;
+            position: absolute;
+          }
+
+          .top {
+            transform: rotate(45deg);
+          }
+
+          .bottom {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .mobile-burger {
+        width: 30px;
+        height: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        cursor: pointer;
+
+        .burger-line {
+          height: 2px;
+          width: inherit;
+          background-color: white;
+        }
       }
     }
-  }
 
-  .content {
-    padding: 80px 15% 200px 15%;
-    width: 50%;
-
-    .title {
-      color: $light-blue;
-      font-size: 5rem;
-    }
-
-    .description {
+    .content {
+      padding-top: 120px;
+      padding-bottom: 200px;
       width: 70%;
-      color: white;
-      font-size: 2rem;
-      margin-bottom: 25px;
-    }
-
-    .social-links {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
 
-      .social-icon {
-        stroke: white;
-        width: 50px;
-        margin-right: 15px;
-        transition: ease-in-out 0.2s;
-        transform: scale(1);
+      .title {
+        color: $light-blue;
+        font-size: 4rem;
+      }
 
-        &:last-of-type {
-          margin-right: 0;
+      .description {
+        max-width: 70%;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+
+      .social-links {
+        display: flex;
+
+        .social-icon {
+          stroke: white;
+          width: 40px;
+          margin-right: 15px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:hover {
+            transition: ease-in-out 0.2s;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    @media (max-width: 1240px) {
+      .splash-nav {
+        .mobile-burger {
+          display: flex;
         }
 
-        &:hover {
-          transform: scale(1.05);
+        .nav-bar {
+          flex-direction: column;
+          align-items: flex-end;
+          position: fixed;
+          top: 0;
+          padding: 70px 80px;
+          height: 100%;
+          background-color: black;
+          display: none;
+          right: 0;
+
+          .mobile-exit {
+            display: unset;
+          }
+
+          .nav-link {
+            margin: 10px 0;
+
+            .join {
+              width: 100%;
+            }
+          }
+        }
+
+        .nav-bar.show {
+          display: flex;
+        }
+      }
+      .content {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 970px) {
+      padding-left: 70px;
+      padding-right: 70px;
+      .content {
+        .title {
+          font-size: 3.3rem;
+        }
+
+        .description {
+          max-width: 100%;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    @media (max-width: 680px) {
+      padding-left: 70px;
+      padding-right: 70px;
+      .content {
+        .title {
+          font-size: 2.6rem;
+        }
+
+        .description {
+          font-size: 1.1rem;
         }
       }
     }

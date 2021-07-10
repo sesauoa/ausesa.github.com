@@ -86,7 +86,7 @@ $light-blue: #70c7b0;
         }
 
         .mobile-exit {
-          margin-bottom: 10px;
+          transform: translateY(-15px);
           width: 30px;
           height: 30px;
           display: none;
@@ -100,11 +100,11 @@ $light-blue: #70c7b0;
           }
 
           .top {
-            transform: rotate(45deg);
+            transform: translateY(15px) rotate(45deg);
           }
 
           .bottom {
-            transform: rotate(-45deg);
+            transform: translateY(15px) rotate(-45deg);
           }
         }
       }
@@ -165,7 +165,10 @@ $light-blue: #70c7b0;
         }
       }
     }
+
     @media (max-width: 1240px) {
+      padding-left: 70px;
+      padding-right: 70px;
       .splash-nav {
         .mobile-burger {
           display: flex;
@@ -176,7 +179,7 @@ $light-blue: #70c7b0;
           align-items: flex-end;
           position: fixed;
           top: 0;
-          padding: 70px 80px;
+          padding: 70px 70px;
           height: 100%;
           background-color: black;
           display: none;
@@ -205,8 +208,6 @@ $light-blue: #70c7b0;
     }
 
     @media (max-width: 970px) {
-      padding-left: 70px;
-      padding-right: 70px;
       .content {
         .title {
           font-size: 3.3rem;

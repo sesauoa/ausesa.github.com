@@ -1,13 +1,122 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+$light-blue: #70c7b0;
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.splash-header {
+  background-image: url("../img/splash-banner.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  min-height: 90vh;
+  width: 100%;
+  font-family: Overpass;
+
+  .splash-container {
+    .splash-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 140px;
+
+      .logo {
+        height: 100px;
+      }
+
+      .nav-bar {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+          color: white;
+          margin-right: 50px;
+          position: relative;
+          white-space: nowrap;
+          cursor: pointer;
+          text-decoration: none;
+          font-size: 1.4rem;
+
+          .join {
+            background-color: $light-blue;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:not(:last-of-type)::after {
+            content: "";
+            width: 0;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            background-color: white;
+            display: block;
+            transform-origin: left center;
+            transition: ease-out 0.2s;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 80px 15% 200px 15%;
+    width: 50%;
+
+    .title {
+      color: $light-blue;
+      font-size: 5rem;
+    }
+
+    .description {
+      width: 70%;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .social-links {
+      display: flex;
+
+      .social-icon {
+        stroke: white;
+        width: 50px;
+        margin-right: 15px;
+        transition: ease-in-out 0.2s;
+        transform: scale(1);
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
 }
 
 .section {
-	
 }

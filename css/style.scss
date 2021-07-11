@@ -26,6 +26,16 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
+// We use this style on default template pages to ensure the
+// footer does not appear halfway up the page (i.e. it is always
+// at the bottom even if the page is lacking content).
+.push-footer-to-bottom {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 // Remove underline from links
 a {
   text-decoration: none;

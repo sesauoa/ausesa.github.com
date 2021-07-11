@@ -16,14 +16,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
-	<header class="page-nav nav-container">
-		{% include nav.html %}
-	</header>
+<body class="push-footer-to-bottom">
+	<div>
+		<header class="page-nav nav-container">
+			{% include nav.html %}
+		</header>
 
-	<main class="page-container">
-		{{ content }}
-	</main>
+		<main class="page-container">
+			{{ content }}
+		</main>
+	</div>
 
 	{% include footer.html %}
 </body>

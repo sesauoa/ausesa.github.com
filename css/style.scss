@@ -43,6 +43,11 @@ a:hover {
   padding: 20px 160px;
   margin: 0 auto;
   max-width: 1920px;
+
+  @media #{$large-display} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 // Main Navigation
@@ -138,6 +143,36 @@ a:hover {
       background-color: white;
     }
   }
+
+  @media #{$large-display} {
+    .mobile-burger {
+      display: flex;
+    }
+
+    .nav-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      position: fixed;
+      top: 0;
+      padding: 70px 70px;
+      height: 100%;
+      background-color: black;
+      display: none;
+      right: 0;
+
+      .mobile-exit {
+        display: unset;
+      }
+
+      .nav-link {
+        margin: 10px 0;
+      }
+    }
+
+    .nav-bar.show {
+      display: flex;
+    }
+  }
 }
 
 // Page Styling
@@ -148,7 +183,7 @@ a:hover {
 // Splash Styling
 .splash-header {
   background-image: url("../img/splash-banner.jpg"),
-  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -157,7 +192,7 @@ a:hover {
   width: 100%;
   font-family: Overpass;
 
-  .splash-container {    
+  .splash-container {
     left: 100%;
     display: flex;
     flex-direction: column;
@@ -207,39 +242,7 @@ a:hover {
     @media #{$large-display} {
       padding-left: 70px;
       padding-right: 70px;
-      .splash-nav {
-        .mobile-burger {
-          display: flex;
-        }
 
-        .nav-bar {
-          flex-direction: column;
-          align-items: flex-end;
-          position: fixed;
-          top: 0;
-          padding: 70px 70px;
-          height: 100%;
-          background-color: black;
-          display: none;
-          right: 0;
-
-          .mobile-exit {
-            display: unset;
-          }
-
-          .nav-link {
-            margin: 10px 0;
-
-            .join {
-              width: 100%;
-            }
-          }
-        }
-
-        .nav-bar.show {
-          display: flex;
-        }
-      }
       .content {
         width: 100%;
       }

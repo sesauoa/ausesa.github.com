@@ -147,7 +147,7 @@ a:hover {
 
 // Splash Styling
 .splash-header {
-  background-image: url("../img/splash-banner.jpg"),
+  background-image: url("/img/splash-banner.jpg"),
   linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
@@ -320,11 +320,11 @@ a:hover {
       .sponsors-flowbox {
         display: flex;
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 5px 25px;
 
         .gold-sponsor {
           height: 55px;
-          width: 160px;
+          width: 140px;
         }
 
         .silver-sponsor {
@@ -339,56 +339,54 @@ a:hover {
       }
     }
   }
-}
 
-@media #{$small-display} {
-  #sponsors .sponsors-inner {
-    flex-direction: column;
-    padding: 10px;
-
-    .sponsors-left {
-      width: 100%;
-
-      h1 {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 20px;
+  @media #{$medium-display} {
+    .sponsors-inner {
+      .sponsors-left {
+        width: 40%;
+        h1 {
+          font-size: 30px;
+        }
       }
-    }
-
-    .sponsors-right {
-      width: 100%;
-      padding: 0 10px;
-
-      h2 {
-        text-align: center;
-      }
-
-      .sponsors-flowbox {
-        justify-content: center;
-        gap: 5px;
+  
+      .sponsors-right {
+        width: 60%;
+        padding: 0 10px;
+  
+        .sponsors-flowbox {
+          gap: 0 25px;
+        }
       }
     }
   }
-}
 
-// Medium Size Displays
-@media #{$medium-display} {
-  #sponsors .sponsors-inner {
-    .sponsors-left {
-      width: 40%;
-      h1 {
-        font-size: 25px;
+  @media #{$small-display} {
+    .sponsors-inner {
+      flex-direction: column;
+      padding: 10px;
+  
+      .sponsors-left {
+        width: 100%;
+  
+        h1 {
+          text-align: center;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
       }
-    }
+  
+      .sponsors-right {
+        width: 100%;
+        padding: 0 10px;
+        padding-bottom: 20px;
+  
+        h2 {
+          text-align: center;
+        }
 
-    .sponsors-right {
-      width: 60%;
-
-      padding: 0 10px;
-
-      .sponsors-flowbox {
-        gap: 10px;
+        .sponsors-flowbox {
+          justify-content: center;
+        }
       }
     }
   }

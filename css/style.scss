@@ -183,7 +183,7 @@ a:hover {
 
 // Splash Styling
 .splash-header {
-  background-image: url("../img/splash-banner.jpg"),
+  background-image: url("/img/splash-banner.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
@@ -324,11 +324,11 @@ a:hover {
       .sponsors-flowbox {
         display: flex;
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 5px 25px;
 
         .gold-sponsor {
           height: 55px;
-          width: 160px;
+          width: 140px;
         }
 
         .silver-sponsor {
@@ -343,56 +343,54 @@ a:hover {
       }
     }
   }
-}
 
-@media #{$small-display} {
-  #sponsors .sponsors-inner {
-    flex-direction: column;
-    padding: 10px;
-
-    .sponsors-left {
-      width: 100%;
-
-      h1 {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-    }
-
-    .sponsors-right {
-      width: 100%;
-      padding: 0 10px;
-
-      h2 {
-        text-align: center;
+  @media #{$medium-display} {
+    .sponsors-inner {
+      .sponsors-left {
+        width: 40%;
+        h1 {
+          font-size: 30px;
+        }
       }
 
-      .sponsors-flowbox {
-        justify-content: center;
-        gap: 5px;
+      .sponsors-right {
+        width: 60%;
+        padding: 0 10px;
+
+        .sponsors-flowbox {
+          gap: 0 25px;
+        }
       }
     }
   }
-}
 
-// Medium Size Displays
-@media #{$medium-display} {
-  #sponsors .sponsors-inner {
-    .sponsors-left {
-      width: 40%;
-      h1 {
-        font-size: 25px;
+  @media #{$small-display} {
+    .sponsors-inner {
+      flex-direction: column;
+      padding: 10px;
+
+      .sponsors-left {
+        width: 100%;
+
+        h1 {
+          text-align: center;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
       }
-    }
 
-    .sponsors-right {
-      width: 60%;
+      .sponsors-right {
+        width: 100%;
+        padding: 0 10px;
+        padding-bottom: 20px;
 
-      padding: 0 10px;
+        h2 {
+          text-align: center;
+        }
 
-      .sponsors-flowbox {
-        gap: 10px;
+        .sponsors-flowbox {
+          justify-content: center;
+        }
       }
     }
   }
@@ -481,5 +479,84 @@ a:hover {
     margin: 0;
     padding: 0 1em 0 0;
     display: inline-block;
+  }
+}
+
+.page-container {
+  max-width: $breakpoint-medium;
+  margin: 40px auto;
+
+  @media #{$medium-display} {
+    padding: 15px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.cal-flexbox {
+  display: flex;
+  gap: 15px;
+
+  main,
+  aside {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 5px solid $sesa-teal-dark;
+    border-radius: 5px 3px 0 0;
+
+    h2 {
+      line-height: 32pt;
+      text-align: center;
+      font-size: 14pt;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  main {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  @media #{$medium-display} {
+    gap: 0;
+
+    main,
+    aside {
+      border-radius: 0;
+    }
+
+    main {
+      width: 60%;
+
+      // Avoid 'double border' effect
+      border-right: none;
+    }
+
+    aside {
+      width: 40%;
+    }
+  }
+
+  @media #{$small-display} {
+    main {
+      // Hide monthly view, only show agenda
+      display: none;
+    }
+
+    aside {
+      width: 100%;
+    }
   }
 }

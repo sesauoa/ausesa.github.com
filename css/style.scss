@@ -483,14 +483,38 @@ a:hover {
 }
 
 .page-container {
-  max-width: $breakpoint-medium;
   margin: 40px auto;
+  display: flex;
+  justify-content: center;
+
+  .page-content-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 160px;
+    width: 1920px;
+
+    @media #{$large-display} {
+      padding: 0;
+    }
+  }
+  @media #{$large-display} {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
 
   @media #{$medium-display} {
     padding: 15px;
 
     h1 {
       text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media #{$small-display} {
+    h1 {
+      font-size: 1.6rem;
     }
   }
 }
@@ -557,6 +581,43 @@ a:hover {
 
     aside {
       width: 100%;
+    }
+  }
+}
+
+.opportunities-table {
+  margin-top: 15px;
+  border-collapse: collapse;
+  tr {
+    display: table-row;
+    border-bottom: 1px solid $sesa-navy;
+    border-top: 1px solid $sesa-navy;
+    td {
+      padding: 15px 0;
+      &:first-child {
+        padding-right: 50px;
+      }
+      &:last-child {
+        white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+        white-space: -webkit-pre-wrap; /* Chrome & Safari */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: pre-wrap; /* CSS3 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+        word-break: break-all;
+        white-space: normal;
+      }
+    }
+  }
+  @media #{$medium-display} {
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media #{$small-display} {
+    h2 {
+      font-size: 1.1rem;
     }
   }
 }

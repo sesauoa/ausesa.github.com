@@ -10,12 +10,45 @@ title: SESA - Home
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Software Engineering Students Association</title>
+    
   </head>
   <body>
     <main>
       <!-- Main Splash and Header -->
-      <header class="section">
-        <p>Splash</p>
+      <header class="section splash-header">
+        <div class="splash-container">
+          <div class="splash-nav">
+            <a href="/"><img src="../img/logo.svg" alt="logo" class="logo"/></a>
+            <a href="#" class="mobile-burger">
+              <div class="burger-line top"></div>
+              <div class="burger-line middle"></div>
+              <div class="burger-line bottom"></div>
+            </a>
+            <nav class="nav-bar">
+              <a href="#" class="mobile-exit">
+                  <div class="line top"></div>
+                  <div class="line bottom"></div>
+              </a>
+              <a href="/" class="nav-link">Home</a>
+              <a href="" class="nav-link">News</a>
+              <a href="" class="nav-link">Opportunities</a>
+              <a href="" class="nav-link">Events Calendar</a>
+              <a href="" class="nav-link">Contact</a>
+              <a href="" class="nav-link"><div class="join">Join</div></a>
+            </nav>
+          </div>
+          <div class="content">
+            <h1 class="title">Software Engineering Students Association</h1>
+            <p class="description">SESA is the association for students and alumni of the Software Engineering programme at the University of Auckland.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/uoasesa" class="social-icon" rel="noopener noreferrer"><img src="../img/social-media-icons/facebook.svg" alt="facebook-icon" /></a>
+              <a href="https://www.instagram.com/sesa.uoa" class="social-icon" rel="noopener noreferrer"><img src="../img/social-media-icons/instagram.svg" alt="instagram-icon" /></a>
+              <a href="https://www.linkedin.com/company/ausesa" class="social-icon" rel="noopener noreferrer"><img src="../img/social-media-icons/linkedin.svg" alt="linkedin-icon" /></a>
+              <a href="https://discord.gg/4qABfUJPsn" class="social-icon" rel="noopener noreferrer"><img src="../img/social-media-icons/discord.svg" alt="discord-icon" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
       </header>
 
         <!-- Sponsors Section -->
@@ -98,5 +131,6 @@ title: SESA - Home
 
       {% include footer.html %}
     </main>
+    <script src="../js/main.js"></script>
   </body>
 </html>

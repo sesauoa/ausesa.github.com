@@ -36,9 +36,119 @@ a:hover {
   text-decoration: underline;
 }
 
+// NAVIGATION
+
+// Shared padding between splash and page nav
+.nav-container {
+  padding: 20px 160px;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+// Main Navigation
+.splash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 80px;
+  }
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      color: white;
+      margin-right: 50px;
+      position: relative;
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.1rem;
+
+      .join {
+        background-color: $sesa-teal-light;
+        padding: 10px 25px 8px 25px;
+        border-radius: 30px;
+
+        &:hover {
+          transition: ease-in 0.2s;
+          transform: scale(1.05);
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:not(:last-of-type)::after {
+        content: "";
+        width: 0;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        background-color: white;
+        display: block;
+        transform-origin: left center;
+        transition: ease-out 0.2s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    .mobile-exit {
+      transform: translateY(-15px);
+      width: 30px;
+      height: 30px;
+      display: none;
+      cursor: pointer;
+
+      .line {
+        width: inherit;
+        background-color: white;
+        height: 2px;
+        position: absolute;
+      }
+
+      .top {
+        transform: translateY(15px) rotate(45deg);
+      }
+
+      .bottom {
+        transform: translateY(15px) rotate(-45deg);
+      }
+    }
+  }
+
+  .mobile-burger {
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    cursor: pointer;
+
+    .burger-line {
+      height: 2px;
+      width: inherit;
+      background-color: white;
+    }
+  }
+}
+
+// Page Styling
+.page-nav {
+  background-color: $sesa-navy;
+}
+
+// Splash Styling
 .splash-header {
   background-image: url("../img/splash-banner.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,108 +157,11 @@ a:hover {
   width: 100%;
   font-family: Overpass;
 
-  .splash-container {
-    padding: 30px 160px;
-    max-width: 1920px;
+  .splash-container {    
     left: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: inherit;
-
-    .splash-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .logo {
-        height: 80px;
-      }
-
-      .nav-bar {
-        display: flex;
-        align-items: center;
-
-        .nav-link {
-          color: white;
-          margin-right: 50px;
-          position: relative;
-          white-space: nowrap;
-          cursor: pointer;
-          text-decoration: none;
-          font-size: 1.1rem;
-
-          .join {
-            background-color: $sesa-teal-light;
-            padding: 10px 25px 8px 25px;
-            border-radius: 30px;
-
-            &:hover {
-              transition: ease-in 0.2s;
-              transform: scale(1.05);
-            }
-          }
-
-          &:last-of-type {
-            margin-right: 0;
-          }
-
-          &:not(:last-of-type)::after {
-            content: "";
-            width: 0;
-            position: absolute;
-            height: 2px;
-            left: 0;
-            background-color: white;
-            display: block;
-            transform-origin: left center;
-            transition: ease-out 0.2s;
-          }
-
-          &:hover::after {
-            width: 100%;
-          }
-        }
-
-        .mobile-exit {
-          transform: translateY(-15px);
-          width: 30px;
-          height: 30px;
-          display: none;
-          cursor: pointer;
-
-          .line {
-            width: inherit;
-            background-color: white;
-            height: 2px;
-            position: absolute;
-          }
-
-          .top {
-            transform: translateY(15px) rotate(45deg);
-          }
-
-          .bottom {
-            transform: translateY(15px) rotate(-45deg);
-          }
-        }
-      }
-
-      .mobile-burger {
-        width: 30px;
-        height: 20px;
-        flex-direction: column;
-        justify-content: space-between;
-        display: none;
-        cursor: pointer;
-
-        .burger-line {
-          height: 2px;
-          width: inherit;
-          background-color: white;
-        }
-      }
-    }
 
     .content {
       padding-top: 120px;

@@ -405,15 +405,28 @@ a:hover {
 }
 
 .body-container {
+  padding: 0 160px;
   display: flex;
-  justify-content: space-evenly;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin: 50px 0;
+  justify-content: center;
+  .body-content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    max-width: 1920px;
 
-  .column {
-    min-width: 320px;
-    width: 40%;
+    .column {
+      min-width: 320px;
+      width: 48%;
+      margin-bottom: 25px;
+      @media #{$medium-display} {
+        width: 100%;
+      }
+    }
+  }
+  @media #{$large-display} {
+    padding: 0 70px;
   }
 }
 
@@ -449,32 +462,52 @@ a:hover {
 }
 
 .footer {
-  $footer-vertical-padding: 1em;
+  $footer-vertical-padding: 2.5em;
   background-color: $sesa-navy;
+  padding: $footer-vertical-padding 160px;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: $footer-vertical-padding 0;
+  justify-content: center;
 
-  a {
-    color: white;
-  }
-
-  .logo-container {
+  .footer-content-container {
     display: flex;
-    justify-content: center;
-    padding-top: $footer-vertical-padding;
-    img {
-      width: 80px;
+    flex-direction: column;
+    width: 1920px;
+
+    a {
+      color: white;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      padding-top: $footer-vertical-padding;
+      img {
+        width: 80px;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: $footer-vertical-padding;
+    }
+
+    @media #{$medium-display} {
+      .footer-links {
+        justify-content: center;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+      }
     }
   }
 
-  .footer-links {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 4em;
-    flex-wrap: wrap;
-    gap: $footer-vertical-padding;
+  @media #{$large-display} {
+    padding: $footer-vertical-padding 70px;
   }
 }
 

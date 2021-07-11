@@ -167,6 +167,7 @@ a:hover {
       background-color: black;
       display: none;
       right: 0;
+      z-index: 1;
 
       .mobile-exit {
         display: unset;

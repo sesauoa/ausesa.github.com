@@ -449,25 +449,25 @@ a:hover {
     }
   }
 
-  .footer-links {
+  .footer-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 4em;
     flex-wrap: wrap;
     gap: $footer-vertical-padding;
-  }
-}
 
-.inline-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    @media #{$medium-display} {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
 
-  li {
-    margin: 0;
-    padding: 0 1em 0 0;
-    display: inline-block;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
   }
 }
 

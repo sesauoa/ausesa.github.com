@@ -187,25 +187,6 @@ a:hover {
         font-size: 1.5rem;
         margin-bottom: 25px;
       }
-
-      .social-links {
-        display: flex;
-
-        .social-icon {
-          stroke: white;
-          width: 40px;
-          margin-right: 15px;
-
-          &:last-of-type {
-            margin-right: 0;
-          }
-
-          &:hover {
-            transition: ease-in-out 0.2s;
-            transform: scale(1.05);
-          }
-        }
-      }
     }
 
     @media #{$large-display} {
@@ -471,6 +452,7 @@ a:hover {
   .footer-links {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 4em;
     flex-wrap: wrap;
     gap: $footer-vertical-padding;
@@ -486,5 +468,24 @@ a:hover {
     margin: 0;
     padding: 0 1em 0 0;
     display: inline-block;
+  }
+}
+
+.social-links {
+  display: flex;
+
+  .social-icon {
+    stroke: white;
+    width: 40px;
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transition: ease-in-out 0.2s;
+      transform: scale(1.05);
+    }
   }
 }

@@ -198,7 +198,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
-  min-height: 90vh;
+  min-height: 100vh;
   width: 100%;
   font-family: Overpass;
 
@@ -219,7 +219,7 @@ a:hover {
 
       .title {
         color: $sesa-teal-light;
-        font-size: 4rem;
+        font-size: 5rem;
       }
 
       .description {
@@ -528,6 +528,9 @@ a:hover {
   margin: 40px auto;
   display: flex;
   justify-content: center;
+  h1 {
+    color: $sesa-teal-light;
+  }
 
   .page-content-container {
     display: flex;
@@ -540,14 +543,13 @@ a:hover {
       padding: 0;
     }
   }
+
   @media #{$large-display} {
     margin-left: 70px;
     margin-right: 70px;
   }
 
   @media #{$medium-display} {
-    padding: 15px;
-
     h1 {
       text-align: center;
       font-size: 1.8rem;
@@ -661,5 +663,58 @@ a:hover {
     h2 {
       font-size: 1.1rem;
     }
+  }
+}
+
+.contact-list {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  justify-content: space-between;
+  gap: 40px;
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 20px;
+    padding: 50px 30px;
+
+    .icon {
+      height: 100px;
+      margin: 30px 0;
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .link {
+      button {
+        background-color: $sesa-teal-light;
+        border: none;
+        padding: 10px 25px 8px 25px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        transition: ease-in 0.2s;
+        transform: scale(1.05);
+      }
+    }
+  }
+  @media #{$medium-display} {
+    grid-template-columns: 1fr;
   }
 }

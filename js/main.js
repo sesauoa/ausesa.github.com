@@ -1,15 +1,10 @@
-$(document).ready(function() {
-  $('#menu_button').on('click', function () {
-    $('#mobile_menu').toggle();
-  });
+const hamburger = document.querySelector(".mobile-burger");
+const mobileExit = document.querySelector(".mobile-exit");
+const nav = document.querySelector(".nav-bar");
 
-  var i = 0;
-  var TOTAL_BANNERS = 10;
-  setInterval(function () {
-  if (i >= TOTAL_BANNERS) {
-	  i = 0;
-  }
-  $('#banner_image').attr('src', '/img/banner/' + i + '.jpg');
-  i++;
-  }, 5000);
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
+mobileExit.addEventListener("click", () => {
+  nav.classList.toggle("show");
 });

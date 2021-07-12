@@ -10,18 +10,58 @@ title: SESA - Home
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Software Engineering Students Association</title>
+    
   </head>
   <body>
     <main>
       <!-- Main Splash and Header -->
-      <header class="section">
-        <p>Splash</p>
+      <header class="section splash-header">
+        <div class="splash-container nav-container">
+          {% include nav.html %}
+          <div class="content">
+            <h1 class="title">Software Engineering Students Association</h1>
+            <p class="description">SESA is the association for students and alumni of the Software Engineering programme at the University of Auckland.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/uoasesa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/facebook.svg" alt="facebook-icon" /></a>
+              <a href="https://www.instagram.com/sesa.uoa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/instagram.svg" alt="instagram-icon" /></a>
+              <a href="https://www.linkedin.com/company/ausesa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/linkedin.svg" alt="linkedin-icon" /></a>
+              <a href="https://discord.gg/4qABfUJPsn" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/discord.svg" alt="discord-icon" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
       </header>
 
-      <!-- Sponsors Section -->
-      <section class="section">
-        <p>Sponsors</p>
-      </section>
+        <!-- Sponsors Section -->
+        <section id="sponsors" class="section">
+            <div class="sponsors-inner">
+                <div class="sponsors-left">
+                    <h1>Proudly supported by our sponsors</h1>
+                </div>
+                <div class="sponsors-right">
+                    <h2 class="gold">Gold Sponsors</h2>
+                    <div class="sponsors-flowbox">
+                        <a href="https://careers.datacom.co.nz/"><img class="sponsors-img gold-sponsor" src="img/sponsors/datacom.jpg" /></a>
+                        <a href="https://www.ecoportal.com/"><img class="sponsors-img gold-sponsor" src="img/sponsors/ecoportal-grayscale.png" /></a>
+                        <a href="https://careers.imc.com/ap/en"><img class="sponsors-img gold-sponsor" src="img/sponsors/imc-grayscale.png" /></a>
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <h2>Silver Sponsors</h2>
+                    <div class="sponsors-flowbox">
+                        <a href="http://atlassian.com/company/careers/students"><img class="sponsors-img silver-sponsor" src="img/sponsors/atlassian-grayscale.png" /></a>
+                        <a href="https://www.commbank.com.au/about-us/careers.html?ei=CB-footer_careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/commonwealth.png" /></a>
+                        <a href="http://www.denko.co.nz/"><img class="sponsors-img silver-sponsor" src="img/sponsors/denko.png" /></a>
+                        <a href="https://careers.honeywell.com/us/en"><img class="sponsors-img silver-sponsor" src="img/sponsors/honeywell.png" /></a>
+                        <a href="https://www.janestreet.com/join-jane-street/"><img class="sponsors-img silver-sponsor" src="img/sponsors/janestreet-grayscale.png" /></a>
+                        <a href="http://sandfield.co.nz/Careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/sandfield-grayscale.png" /></a>
+                        <a href="https://serato.com/careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/serato-grayscale.png" /></a>
+                        <a href="https://sylo.io/careers/"><img class="sponsors-img silver-sponsor" src="img/sponsors/sylo.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
       <!-- Body -->
       <section class="section">
@@ -72,5 +112,6 @@ title: SESA - Home
 
       {% include footer.html %}
     </main>
+    <script src="/js/main.js"></script>
   </body>
 </html>

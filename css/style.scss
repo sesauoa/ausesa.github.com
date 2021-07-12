@@ -494,9 +494,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
 
   .news-post {
+    padding: 2em 0;
+    border-bottom: solid 1px lightgray;
+    width: 80%;
+    max-width: 960px;
+
     .news-title {
       font-size: 2em;
     }
@@ -508,6 +512,7 @@ a:hover {
 
     p {
       padding-bottom: 1em;
+      text-align: justify;
     }
 
     ul {
@@ -517,8 +522,10 @@ a:hover {
     img {
       margin: 1em 0;
     }
+  }
 
-    max-width: 960px;
+  .pagination {
+    padding: 2em 0;
   }
 }
 .responsive {

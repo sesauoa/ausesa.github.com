@@ -68,17 +68,6 @@ a:hover {
       text-decoration: none;
       font-size: 1.1rem;
 
-      .join {
-        background-color: $sesa-teal-light;
-        padding: 10px 25px 8px 25px;
-        border-radius: 30px;
-
-        &:hover {
-          transition: ease-in 0.2s;
-          transform: scale(1.05);
-        }
-      }
-
       &:last-of-type {
         margin-right: 0;
       }
@@ -140,6 +129,22 @@ a:hover {
   }
 }
 
+// Join Button base styling
+.join {
+  background-color: $sesa-teal-light;
+  padding: 10px 25px 8px 25px;
+  border-radius: 30px;
+
+  &:hover {
+    transition: ease-in 0.2s;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: $sesa-teal-dark;
+  }
+}
+
 // Page Styling
 .page-nav {
   background-color: $sesa-navy;
@@ -147,8 +152,7 @@ a:hover {
 
 // Splash Styling
 .splash-header {
-  background-image: url("../img/splash-banner.jpg"),
-  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  background-image: url("../img/splash-banner.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -157,7 +161,7 @@ a:hover {
   width: 100%;
   font-family: Overpass;
 
-  .splash-container {    
+  .splash-container {
     left: 100%;
     display: flex;
     flex-direction: column;
@@ -419,22 +423,26 @@ a:hover {
     padding-bottom: 1em;
   }
 
-  button {
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 8px 32px;
-    background-color: $sesa-teal-light;
-    border: 0;
-    border-radius: 12px;
-    outline: none;
+  .button-link {
     color: white;
+    font-size: 1.1rem;
 
     &:hover {
-      background-color: $sesa-teal-dark;
+      text-decoration: none;
     }
 
-    &:active {
-      background-color: darken($sesa-teal-dark, 10%);
+    .join {
+      text-align: center;
+      width: max-content;
+
+      &:hover {
+        transition: ease-in 0.2s;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background-color: $sesa-teal-dark;
+      }
     }
   }
 }

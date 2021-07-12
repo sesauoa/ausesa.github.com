@@ -629,58 +629,23 @@ a:hover {
   }
 }
 
-.opportunities-table {
-  margin-top: 15px;
-  border-collapse: collapse;
-  tr {
-    display: table-row;
-    border-bottom: 1px solid $sesa-navy;
-    border-top: 1px solid $sesa-navy;
-    td {
-      padding: 15px 0;
-      &:first-child {
-        padding-right: 50px;
-      }
-      &:last-child {
-        white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-        white-space: -webkit-pre-wrap; /* Chrome & Safari */
-        white-space: -pre-wrap; /* Opera 4-6 */
-        white-space: -o-pre-wrap; /* Opera 7 */
-        white-space: pre-wrap; /* CSS3 */
-        word-wrap: break-word; /* Internet Explorer 5.5+ */
-        word-break: break-all;
-        white-space: normal;
-      }
-    }
-  }
-  @media #{$medium-display} {
-    h2 {
-      font-size: 1.4rem;
-    }
-  }
-
-  @media #{$small-display} {
-    h2 {
-      font-size: 1.1rem;
-    }
-  }
-}
-
-.contact-list {
+.contact-list,
+.opportunities-list {
   margin: 50px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   justify-content: space-between;
   gap: 40px;
 
-  .contact-card {
+  .contact-card,
+  .sponsor-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     border-radius: 20px;
-    padding: 50px 30px;
+    padding: 50px 40px;
 
     .icon {
       height: 100px;
@@ -713,8 +678,5 @@ a:hover {
         transform: scale(1.05);
       }
     }
-  }
-  @media #{$medium-display} {
-    grid-template-columns: 1fr;
   }
 }

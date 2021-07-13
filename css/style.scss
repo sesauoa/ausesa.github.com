@@ -379,21 +379,39 @@ a:hover {
   }
 }
 
+// Used for containers of page content in the homepage and news page
 .body-container {
-  padding: 2em 0;
+  padding: 4em 0;
   display: flex;
-  justify-content: space-evenly;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 3em;
 
-  .column {
-    min-width: 320px;
-    width: 40%;
+  .double-column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    @media #{$medium-display} {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .column {
+      width: 40%;
+
+      @media #{$medium-display} {
+        width: 100%;
+        max-width: 960px;
+      }
+    }
   }
 }
 
-.post {
+// Class for text content (e.g. articles) in the home page body and news page
+.home-post {
   .title {
     padding-bottom: 0.5em;
     color: $sesa-teal-dark;
@@ -426,8 +444,46 @@ a:hover {
       }
     }
   }
+
+  .news-post {
+    border-bottom: none;
+
+    .news-title {
+      font-size: 1.2em;
+    }
+  }
 }
 
+// Setting font sizes/colors and padding for news articles
+.news-post {
+  padding: 2em 0;
+  border-bottom: solid 1px lightgray;
+
+  .news-title {
+    font-size: 2em;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.5em 0;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    padding-bottom: 1em;
+    text-align: justify;
+    line-height: 150%;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+
+  img {
+    margin: 1em 0;
+  }
+}
+
+// Styling for the footer
 .footer {
   $footer-vertical-padding: 1em;
   background-color: $sesa-navy;
@@ -471,6 +527,7 @@ a:hover {
   }
 }
 
+// Styling for the social media link buttons on the home page and in the footer
 .social-links {
   display: flex;
 
@@ -490,44 +547,18 @@ a:hover {
   }
 }
 
-.news {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .news-post {
-    padding: 2em 0;
-    border-bottom: solid 1px lightgray;
-    width: 80%;
-    max-width: 960px;
-
-    .news-title {
-      font-size: 2em;
-    }
-
-    :is(h1, h2, h3, h4, h5, h6) {
-      padding: 0.5em 0;
-      color: rgba(0, 0, 0, 0.8);
-    }
-
-    p {
-      padding-bottom: 1em;
-      text-align: justify;
-    }
-
-    ul {
-      margin-left: 1em;
-    }
-
-    img {
-      margin: 1em 0;
-    }
-  }
-
-  .pagination {
-    padding: 2em 0;
-  }
+// Normalises the width of content in pages
+.page-content {
+  width: 80%;
+  max-width: 960px;
 }
+
+// This class is used by the pagination buttons/links at the bottom of a paginated page
+.pagination {
+  padding: 2em 0;
+}
+
+// This class is used by images in articles/posts
 .responsive {
-  width: 70%;
+  width: 100%;
 }

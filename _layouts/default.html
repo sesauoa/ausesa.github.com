@@ -23,14 +23,12 @@
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     />
   </head>
-  <body>
-    <header class="page-nav">
-      <div class="nav-container">{% include nav.html %}</div>
-    </header>
+  <body class="push-footer-to-bottom">
+    <div>
+      <header class="page-nav nav-container">{% include nav.html %}</header>
 
-    <main class="page-container">
-      <div class="page-content-container">{{ content }}</div>
-    </main>
+      <main class="page-container">{{ content }}</main>
+    </div>
 
     {% include footer.html %}
   </body>

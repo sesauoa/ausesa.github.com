@@ -1,0 +1,757 @@
+---
+---
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+// Colours
+$sesa-teal-dark: #49bfaa;
+$sesa-teal-light: #70c7b0;
+$sesa-navy: #00112b;
+
+// Breakpoints
+$breakpoint-small: 680px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1240px;
+
+$small-display: "(max-width: #{$breakpoint-small})";
+$medium-display: "(max-width: #{$breakpoint-medium})";
+$large-display: "(max-width: #{$breakpoint-large})";
+
+* {
+  margin: 0;
+  padding: 0;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $sesa-teal-light;
+  }
+}
+
+body,
+button {
+  font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+// We use this style on default template pages to ensure the
+// footer does not appear halfway up the page (i.e. it is always
+// at the bottom even if the page is lacking content).
+.push-footer-to-bottom {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Remove underline from links
+a {
+  text-decoration: none;
+  color: $sesa-teal-dark;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+// NAVIGATION
+
+// Shared padding between splash and page nav
+.nav-container {
+  padding: 20px 160px;
+  margin: 0 auto;
+  max-width: 1920px;
+
+  @media #{$large-display} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Main Navigation
+.splash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 80px;
+  }
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      color: white;
+      margin-right: 50px;
+      position: relative;
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.1rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:not(:last-of-type)::after {
+        content: "";
+        width: 0;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        background-color: white;
+        display: block;
+        transform-origin: left center;
+        transition: ease-out 0.2s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    .mobile-exit {
+      transform: translateY(-15px);
+      width: 30px;
+      height: 30px;
+      display: none;
+      cursor: pointer;
+
+      .line {
+        width: inherit;
+        background-color: white;
+        height: 2px;
+        position: absolute;
+      }
+
+      .top {
+        transform: translateY(15px) rotate(45deg);
+      }
+
+      .bottom {
+        transform: translateY(15px) rotate(-45deg);
+      }
+    }
+  }
+
+  .mobile-burger {
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    cursor: pointer;
+
+    .burger-line {
+      height: 2px;
+      width: inherit;
+      background-color: white;
+    }
+  }
+
+  @media #{$large-display} {
+    .mobile-burger {
+      display: flex;
+    }
+
+    .nav-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      position: fixed;
+      top: 0;
+      padding: 70px 70px;
+      height: 100%;
+      background-color: black;
+      display: none;
+      right: 0;
+      z-index: 1;
+
+      .mobile-exit {
+        display: unset;
+      }
+
+      .nav-link {
+        margin: 10px 0;
+      }
+    }
+
+    .nav-bar.show {
+      display: flex;
+    }
+  }
+}
+
+// Join Button base styling
+.join {
+  background-color: $sesa-teal-light;
+  padding: 10px 25px 8px 25px;
+  border-radius: 30px;
+
+  &:hover {
+    transition: ease-in 0.2s;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: $sesa-teal-dark;
+  }
+}
+
+// Page Styling
+.page-nav {
+  background-color: $sesa-navy;
+  width: 100%;
+}
+
+// Splash Styling
+.splash-header {
+  background-image: url("/img/splash-banner.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Overpass;
+
+  .splash-container {
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+
+    .content {
+      padding-top: 120px;
+      padding-bottom: 200px;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+
+      .title {
+        color: $sesa-teal-light;
+        font-size: 5rem;
+      }
+
+      .description {
+        max-width: 70%;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media #{$large-display} {
+      padding-left: 70px;
+      padding-right: 70px;
+
+      .content {
+        width: 100%;
+      }
+    }
+
+    @media #{$medium-display} {
+      .content {
+        .title {
+          font-size: 3.3rem;
+        }
+
+        .description {
+          max-width: 100%;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    @media #{$small-display} {
+      padding-left: 70px;
+      padding-right: 70px;
+      .content {
+        .title {
+          font-size: 2.6rem;
+        }
+
+        .description {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+.sponsors {
+  background-color: $sesa-navy;
+
+  .sponsors-inner {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    padding: 40px;
+
+    .sponsors-left,
+    .sponsors-right {
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+
+    .sponsors-left {
+      width: 30%;
+
+      h1 {
+        text-align: right;
+        vertical-align: middle;
+        color: white;
+        font-size: 40px;
+      }
+    }
+
+    .sponsors-right {
+      width: 70%;
+
+      h2 {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14pt;
+      }
+
+      h2.gold {
+        color: #ffcc00;
+      }
+
+      .spacer {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .sponsors-flowbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+
+        .gold-sponsor {
+          height: 55px;
+          width: 140px;
+        }
+
+        .silver-sponsor {
+          height: 45px;
+          width: 100px;
+        }
+
+        .sponsors-img {
+          box-sizing: border-box;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  @media #{$medium-display} {
+    .sponsors-inner {
+      .sponsors-left {
+        width: 40%;
+        h1 {
+          font-size: 30px;
+        }
+      }
+
+      .sponsors-right {
+        width: 60%;
+        padding: 0 10px;
+
+        .sponsors-flowbox {
+          gap: 0 25px;
+        }
+      }
+    }
+  }
+
+  @media #{$small-display} {
+    .sponsors-inner {
+      flex-direction: column;
+      padding: 10px;
+
+      .sponsors-left {
+        width: 100%;
+
+        h1 {
+          text-align: center;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .sponsors-right {
+        width: 100%;
+        padding: 0 10px;
+        padding-bottom: 20px;
+
+        h2 {
+          text-align: center;
+        }
+
+        .sponsors-flowbox {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+// Used for containers of page content in the homepage and news page
+.body-container {
+  padding: 4em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 3em;
+
+  .double-column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    @media #{$medium-display} {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .column {
+      width: 40%;
+
+      @media #{$medium-display} {
+        width: 100%;
+        max-width: 960px;
+      }
+    }
+  }
+}
+
+// Class for text content (e.g. articles) in the home page body and news page
+.home-post {
+  .title {
+    padding-bottom: 0.5em;
+    color: $sesa-teal-dark;
+  }
+
+  p {
+    text-align: justify;
+    padding-bottom: 1em;
+  }
+
+  .button-link {
+    color: white;
+    font-size: 1.1rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .join {
+      text-align: center;
+      width: max-content;
+
+      &:hover {
+        transition: ease-in 0.2s;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background-color: $sesa-teal-dark;
+      }
+    }
+  }
+
+  .news-post {
+    border-bottom: none;
+
+    .news-title {
+      font-size: 1.2em;
+    }
+  }
+}
+
+// Normalises the width of content in pages
+.page-content {
+  max-width: 960px;
+
+  p {
+    padding-bottom: 1em;
+    text-align: justify;
+    line-height: 150%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  // Setting font sizes/colors and padding for news articles
+  .news-post {
+    padding: 2em 0;
+    border-bottom: solid 1px lightgray;
+
+    .news-title {
+      font-size: 2em;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+      padding: 0.5em 0;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    ul {
+      margin-left: 1em;
+    }
+
+    img {
+      margin: 1em 0;
+    }
+  }
+}
+
+// This class is used by the pagination buttons/links at the bottom of a paginated page
+.pagination {
+  padding: 2em 0;
+}
+
+// This class is used by images in articles/posts
+.responsive {
+  width: 100%;
+}
+
+// Styling for the footer
+.footer {
+  $footer-vertical-padding: 2.5em;
+  background-color: $sesa-navy;
+  padding: $footer-vertical-padding 160px;
+
+  .footer-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      padding-top: $footer-vertical-padding;
+      img {
+        width: 80px;
+      }
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $footer-vertical-padding;
+
+      @media #{$medium-display} {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media #{$large-display} {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Styling for the social media link buttons on the home page and in the footer
+.social-links {
+  display: flex;
+
+  .social-icon {
+    stroke: white;
+    width: 40px;
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transition: ease-in-out 0.2s;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.page-container {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  h1 {
+    color: $sesa-teal-light;
+  }
+
+  .page-content-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 160px;
+    width: 1920px;
+
+    @media #{$large-display} {
+      padding: 0;
+    }
+  }
+
+  @media #{$large-display} {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  @media #{$medium-display} {
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media #{$small-display} {
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.cal-flexbox {
+  display: flex;
+  gap: 15px;
+
+  main,
+  aside {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 5px solid $sesa-teal-dark;
+    border-radius: 5px 3px 0 0;
+
+    h2 {
+      line-height: 32pt;
+      text-align: center;
+      font-size: 14pt;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  main {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  @media #{$medium-display} {
+    gap: 0;
+
+    main,
+    aside {
+      border-radius: 0;
+    }
+
+    main {
+      width: 60%;
+
+      // Avoid 'double border' effect
+      border-right: none;
+    }
+
+    aside {
+      width: 40%;
+    }
+  }
+
+  @media #{$small-display} {
+    main {
+      // Hide monthly view, only show agenda
+      display: none;
+    }
+
+    aside {
+      width: 100%;
+    }
+  }
+}
+
+.contact-list,
+.opportunities-list {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  justify-content: space-between;
+  gap: 40px;
+
+  .contact-card,
+  .sponsor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 20px;
+    padding: 50px 40px;
+
+    .icon {
+      height: 100px;
+      margin: 30px 0;
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .link {
+      button {
+        background-color: $sesa-teal-light;
+        border: none;
+        padding: 10px 25px 8px 25px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        transition: ease-in 0.2s;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

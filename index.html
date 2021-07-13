@@ -1,28 +1,117 @@
 ---
-layout: default
 title: SESA - Home
 ---
 
-<section class="column post about">
-  <h2 class="section-title about-title"><a name="about" href="#about">About SESA</a></h2>
-  <p>
-    SESA is the Software Engineering Students Association for students and alumni of the Software Engineering programme at the <a href="https://auckland.ac.nz">University of Auckland</a>. We organise and run events for members such as LAN parties, shadow classes, and careers evenings.
-  </p>
-  <p>
-    Where necessary we also act as a liaison between the department and the SE students, raising any relevant issues (course content, difficulties in learning).
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <title>Software Engineering Students Association</title>
+  </head>
+  <body>
+    <main>
+      <!-- Main Splash and Header -->
+      <header class="splash-header">
+        <div class="splash-container nav-container">
+          {% include nav.html %}
+          <div class="content">
+            <h1 class="title">Software Engineering Students Association</h1>
+            <p class="description">SESA is the association for students and alumni of the Software Engineering programme at the University of Auckland.</p>
+            {% include socials.html %}
+          </div>
+        </div>
+      </div>
+      </header>
 
-<section class="column post join">
-  <h2 class="section-title join-title"><a name="join" href="#join">How to Join</a></h2>
-  <p>To join SESA, fill out <a href="/join">this form</a>. Joining is 100% free. Follow the instructions on the form to become a member, even if you did this last year. Membership doesn't roll over so you need to fill out this form each year!</p>
-  <p>Once you have filled out the form, don't forget to join the <a href="https://www.facebook.com/groups/ausesa/">Facebook Group</a>, where most of our discussion happens!</p>
-</section>
+        <!-- Sponsors Section -->
+        <section class="sponsors">
+            <div class="sponsors-inner">
+                <div class="sponsors-left">
+                    <h1>Proudly supported by our sponsors</h1>
+                </div>
+                <div class="sponsors-right">
+                    <h2 class="gold">Gold Sponsors</h2>
+                    <div class="sponsors-flowbox">
+                        <a href="https://careers.datacom.co.nz/"><img class="sponsors-img gold-sponsor" src="img/sponsors/Datacom.svg" /></a>
+                        <a href="https://www.ecoportal.com/"><img class="sponsors-img gold-sponsor" src="img/sponsors/ecoPortal.svg" /></a>
+                        <a href="https://careers.imc.com/ap/en"><img class="sponsors-img gold-sponsor" src="img/sponsors/IMC Trading.svg" /></a>
+                    </div>
 
-<section class="post news-post">
-  <h2 class="section-title news-title"><a name="news" href="#news">Latest News</a></h2>
-  {% assign article = site.posts.first %}
-  {% include article.html %}
+                    <span class="spacer"></span>
 
-  <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
-</section>
+                    <h2>Silver Sponsors</h2>
+                    <div class="sponsors-flowbox">
+                        <a href="http://atlassian.com/company/careers/students"><img class="sponsors-img silver-sponsor" src="img/sponsors/Atlassian.svg" /></a>
+                        <a href="https://www.commbank.com.au/about-us/careers.html?ei=CB-footer_careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/Commonwealth Bank.svg" /></a>
+                        <a href="http://www.denko.co.nz/"><img class="sponsors-img silver-sponsor" src="img/sponsors/Denko.svg" /></a>
+                        <a href="https://careers.honeywell.com/us/en"><img class="sponsors-img silver-sponsor" src="img/sponsors/Honeywell.svg" /></a>
+                        <a href="https://www.janestreet.com/join-jane-street/"><img class="sponsors-img silver-sponsor" src="img/sponsors/Jane Street.svg" /></a>
+                        <a href="http://sandfield.co.nz/Careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/Sandfield.png" /></a>
+                        <a href="https://serato.com/careers"><img class="sponsors-img silver-sponsor" src="img/sponsors/Serato.svg" /></a>
+                        <a href="https://sylo.io/careers/"><img class="sponsors-img silver-sponsor" src="img/sponsors/Sylo.svg" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Body -->
+      <section class="page-container">
+        <div class="body-container">
+          <div class="double-column page-content">
+            <section class="column home-post">
+              <h2 class="title">
+                <a name="about" href="#about">About SESA</a>
+              </h2>
+              <p>
+                SESA is the Software Engineering Students Association for students and alumni of the Software Engineering
+                programme at the
+                <a href="https://auckland.ac.nz">University of Auckland</a>. We organise and run events for members such
+                as career workshops, game nights, and industry talks with our sponsors.
+              </p>
+              <p>
+                Where necessary we also act as a liaison between the department and the SOFTENG students, raising any
+                relevant issues (course content, difficulties in learning).
+              </p>
+            </section>
+
+            <section class="column home-post">
+              <h2 class="title">
+                <a name="join" href="#join">How to Join</a>
+              </h2>
+              <p>
+                To join SESA, fill out <a href="/join">this form</a>. Joining is 100% free. Follow the instructions on the
+                form to become a member, even if you did this last year. Membership doesn't roll over so you need to fill
+                out this form each year!
+              </p>
+              <p>
+                Once you have filled out the form, don't forget to join the
+                <a href="https://www.facebook.com/groups/ausesa/">Facebook Group</a>, where most of our discussion
+                happens!
+              </p>
+              <a href="/join" class="button-link"><div class="join">Join Now</div></a>
+            </section>
+            </div>
+
+          <section class="home-post page-content">
+            <h2 class="section-title news-title">
+              <a name="news" href="#news">Latest News</a>
+            </h2>
+            {% assign article = site.posts.first %} {% include article.html %}
+
+            <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
+          </section>
+        </div>
+      </section>
+
+      {% include footer.html %}
+    </main>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

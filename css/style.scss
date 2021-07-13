@@ -533,6 +533,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
 
     .logo-container {
       display: flex;

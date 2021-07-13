@@ -474,19 +474,10 @@ a:hover {
   }
 }
 
-// Setting font sizes/colors and padding for news articles
-.news-post {
-  padding: 2em 0;
-  border-bottom: solid 1px lightgray;
-
-  .news-title {
-    font-size: 2em;
-  }
-
-  :is(h1, h2, h3, h4, h5, h6) {
-    padding: 0.5em 0;
-    color: rgba(0, 0, 0, 0.8);
-  }
+// Normalises the width of content in pages
+.page-content {
+  width: 80%;
+  max-width: 960px;
 
   p {
     padding-bottom: 1em;
@@ -494,58 +485,55 @@ a:hover {
     line-height: 150%;
   }
 
-  ul {
-    margin-left: 1em;
-  }
+  // Setting font sizes/colors and padding for news articles
+  .news-post {
+    padding: 2em 0;
+    border-bottom: solid 1px lightgray;
 
-  img {
-    margin: 1em 0;
+    .news-title {
+      font-size: 2em;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+      padding: 0.5em 0;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    ul {
+      margin-left: 1em;
+    }
+
+    img {
+      margin: 1em 0;
+    }
   }
+}
+
+// This class is used by the pagination buttons/links at the bottom of a paginated page
+.pagination {
+  padding: 2em 0;
+}
+
+// This class is used by images in articles/posts
+.responsive {
+  width: 100%;
 }
 
 // Styling for the footer
 .footer {
   $footer-vertical-padding: 2.5em;
   background-color: $sesa-navy;
-  padding: $footer-vertical-padding 160px;
+  padding: $footer-vertical-padding;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
-  .footer-content-container {
+  .logo-container {
     display: flex;
-    flex-direction: column;
-    width: 1920px;
-
-    a {
-      color: white;
-    }
-
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      padding-top: $footer-vertical-padding;
-      img {
-        width: 80px;
-      }
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: $footer-vertical-padding;
-    }
-
-    @media #{$medium-display} {
-      .footer-links {
-        justify-content: center;
-        ul {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          width: 100%;
-        }
-      }
+    justify-content: center;
+    padding-top: $footer-vertical-padding;
+    img {
+      width: 80px;
     }
   }
 
@@ -567,6 +555,10 @@ a:hover {
       flex-wrap: wrap;
       gap: 1em;
       justify-content: center;
+
+      a {
+        color: white;
+      }
     }
   }
 }
@@ -746,20 +738,4 @@ a:hover {
       }
     }
   }
-}
-
-// Normalises the width of content in pages
-.page-content {
-  width: 80%;
-  max-width: 960px;
-}
-
-// This class is used by the pagination buttons/links at the bottom of a paginated page
-.pagination {
-  padding: 2em 0;
-}
-
-// This class is used by images in articles/posts
-.responsive {
-  width: 100%;
 }

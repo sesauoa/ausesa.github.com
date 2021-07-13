@@ -24,12 +24,7 @@ title: SESA - Home
           <div class="content">
             <h1 class="title">Software Engineering Students Association</h1>
             <p class="description">SESA is the association for students and alumni of the Software Engineering programme at the University of Auckland.</p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/uoasesa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/facebook.svg" alt="facebook-icon" /></a>
-              <a href="https://www.instagram.com/sesa.uoa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/instagram.svg" alt="instagram-icon" /></a>
-              <a href="https://www.linkedin.com/company/ausesa" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/linkedin.svg" alt="linkedin-icon" /></a>
-              <a href="https://discord.gg/4qABfUJPsn" class="social-icon" rel="noopener noreferrer"><img src="/img/social-media-icons/discord.svg" alt="discord-icon" /></a>
-            </div>
+            {% include socials.html %}
           </div>
         </div>
       </div>
@@ -69,8 +64,8 @@ title: SESA - Home
       <!-- Body -->
       <section>
         <div class="body-container">
-          <div class="body-content-container">
-            <section class="column post">
+          <div class="double-column page-content">
+            <section class="column home-post">
               <h2 class="title">
                 <a name="about" href="#about">About SESA</a>
               </h2>
@@ -86,7 +81,7 @@ title: SESA - Home
               </p>
             </section>
 
-            <section class="column post">
+            <section class="column home-post">
               <h2 class="title">
                 <a name="join" href="#join">How to Join</a>
               </h2>
@@ -100,18 +95,18 @@ title: SESA - Home
                 <a href="https://www.facebook.com/groups/ausesa/">Facebook Group</a>, where most of our discussion
                 happens!
               </p>
-              <button>Join Now</button>
+              <a href="/join" class="button-link"><div class="join">Join Now</div></a>
             </section>
+            </div>
 
-            <!-- <section class="post news-post">
-              <h2 class="section-title news-title">
-                <a name="news" href="#news">Latest News</a>
-              </h2>
-              {% assign article = site.posts.first %} {% include article.html %}
+          <section class="home-post page-content">
+            <h2 class="section-title news-title">
+              <a name="news" href="#news">Latest News</a>
+            </h2>
+            {% assign article = site.posts.first %} {% include article.html %}
 
-              <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
-            </section> -->
-          </div>
+            <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
+          </section>
         </div>
       </section>
 

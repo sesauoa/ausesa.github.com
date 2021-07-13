@@ -91,17 +91,6 @@ a:hover {
       text-decoration: none;
       font-size: 1.1rem;
 
-      .join {
-        background-color: $sesa-teal-light;
-        padding: 10px 25px 8px 25px;
-        border-radius: 30px;
-
-        &:hover {
-          transition: ease-in 0.2s;
-          transform: scale(1.05);
-        }
-      }
-
       &:last-of-type {
         margin-right: 0;
       }
@@ -194,6 +183,22 @@ a:hover {
   }
 }
 
+// Join Button base styling
+.join {
+  background-color: $sesa-teal-light;
+  padding: 10px 25px 8px 25px;
+  border-radius: 30px;
+
+  &:hover {
+    transition: ease-in 0.2s;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: $sesa-teal-dark;
+  }
+}
+
 // Page Styling
 .page-nav {
   background-color: $sesa-navy;
@@ -201,8 +206,7 @@ a:hover {
 
 // Splash Styling
 .splash-header {
-  background-image: url("/img/splash-banner.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  background-image: url("/img/splash-banner.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -236,25 +240,6 @@ a:hover {
         color: white;
         font-size: 1.5rem;
         margin-bottom: 25px;
-      }
-
-      .social-links {
-        display: flex;
-
-        .social-icon {
-          stroke: white;
-          width: 40px;
-          margin-right: 15px;
-
-          &:last-of-type {
-            margin-right: 0;
-          }
-
-          &:hover {
-            transition: ease-in-out 0.2s;
-            transform: scale(1.05);
-          }
-        }
       }
     }
 
@@ -414,33 +399,39 @@ a:hover {
   }
 }
 
+// Used for containers of page content in the homepage and news page
 .body-container {
-  padding: 0 160px;
+  padding: 4em 0;
   display: flex;
-  justify-content: center;
-  .body-content-container {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 3em;
+
+  .double-column {
     display: flex;
     justify-content: space-between;
-    gap: 4%;
     flex-wrap: wrap;
-    margin: 50px 0;
-    max-width: 1920px;
+    gap: 2em;
+
+    @media #{$medium-display} {
+      flex-direction: column;
+      justify-content: start;
+    }
 
     .column {
-      min-width: 320px;
-      width: 48%;
-      margin-bottom: 25px;
+      width: 40%;
+
       @media #{$medium-display} {
         width: 100%;
+        max-width: 960px;
       }
     }
   }
-  @media #{$large-display} {
-    padding: 0 70px;
-  }
 }
 
-.post {
+// Class for text content (e.g. articles) in the home page body and news page
+.home-post {
   .title {
     padding-bottom: 0.5em;
     color: $sesa-teal-dark;
@@ -451,26 +442,68 @@ a:hover {
     padding-bottom: 1em;
   }
 
-  button {
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 8px 32px;
-    background-color: $sesa-teal-light;
-    border: 0;
-    border-radius: 12px;
-    outline: none;
+  .button-link {
     color: white;
+    font-size: 1.1rem;
 
     &:hover {
-      background-color: $sesa-teal-dark;
+      text-decoration: none;
     }
 
-    &:active {
-      background-color: darken($sesa-teal-dark, 10%);
+    .join {
+      text-align: center;
+      width: max-content;
+
+      &:hover {
+        transition: ease-in 0.2s;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background-color: $sesa-teal-dark;
+      }
+    }
+  }
+
+  .news-post {
+    border-bottom: none;
+
+    .news-title {
+      font-size: 1.2em;
     }
   }
 }
 
+// Setting font sizes/colors and padding for news articles
+.news-post {
+  padding: 2em 0;
+  border-bottom: solid 1px lightgray;
+
+  .news-title {
+    font-size: 2em;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.5em 0;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    padding-bottom: 1em;
+    text-align: justify;
+    line-height: 150%;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+
+  img {
+    margin: 1em 0;
+  }
+}
+
+// Styling for the footer
 .footer {
   $footer-vertical-padding: 2.5em;
   background-color: $sesa-navy;
@@ -516,20 +549,45 @@ a:hover {
     }
   }
 
-  @media #{$large-display} {
-    padding: $footer-vertical-padding 70px;
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4em;
+    flex-wrap: wrap;
+    gap: $footer-vertical-padding;
+
+    @media #{$medium-display} {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
   }
 }
 
-.inline-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+// Styling for the social media link buttons on the home page and in the footer
+.social-links {
+  display: flex;
 
-  li {
-    margin: 0;
-    padding: 0 1em 0 0;
-    display: inline-block;
+  .social-icon {
+    stroke: white;
+    width: 40px;
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transition: ease-in-out 0.2s;
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -687,5 +745,21 @@ a:hover {
         transform: scale(1.05);
       }
     }
+  }
+  
+  // Normalises the width of content in pages
+  .page-content {
+    width: 80%;
+    max-width: 960px;
+  }
+
+  // This class is used by the pagination buttons/links at the bottom of a paginated page
+  .pagination {
+    padding: 2em 0;
+  }
+
+  // This class is used by images in articles/posts
+  .responsive {
+    width: 100%;
   }
 }

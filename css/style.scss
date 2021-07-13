@@ -527,43 +527,50 @@ a:hover {
 .footer {
   $footer-vertical-padding: 2.5em;
   background-color: $sesa-navy;
-  padding: $footer-vertical-padding;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: $footer-vertical-padding 160px;
 
-  .logo-container {
+  .footer-content-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: $footer-vertical-padding;
-    img {
-      width: 80px;
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      padding-top: $footer-vertical-padding;
+      img {
+        width: 80px;
+      }
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $footer-vertical-padding;
+
+      @media #{$medium-display} {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+
+        a {
+          color: white;
+        }
+      }
     }
   }
 
-  .footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 4em;
-    flex-wrap: wrap;
-    gap: $footer-vertical-padding;
-
-    @media #{$medium-display} {
-      flex-direction: column-reverse;
-      justify-content: center;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      justify-content: center;
-
-      a {
-        color: white;
-      }
-    }
+  @media #{$large-display} {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 

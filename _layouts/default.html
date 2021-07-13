@@ -27,7 +27,11 @@
     <div>
       <header class="page-nav nav-container">{% include nav.html %}</header>
 
-      <main class="page-container">{{ content }}</main>
+      <main class="page-container">
+        <div class="page-content-container">
+          {{ content }}
+        </div>
+      </main>
     </div>
 
     {% include footer.html %}

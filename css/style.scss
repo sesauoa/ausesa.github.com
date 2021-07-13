@@ -30,8 +30,8 @@ $large-display: "(max-width: #{$breakpoint-large})";
   }
 }
 
-body {
-  font-family: "Overpass", sans-serif;
+body, button {
+  font-family: "Overpass", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 // We use this style on default template pages to ensure the
@@ -197,7 +197,6 @@ a:hover {
 // Page Styling
 .page-nav {
   background-color: $sesa-navy;
-  width: 100%;
 }
 
 // Splash Styling

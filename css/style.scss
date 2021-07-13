@@ -480,13 +480,16 @@ a:hover {
 
 // Normalises the width of content in pages
 .page-content {
-  width: 80%;
   max-width: 960px;
 
   p {
     padding-bottom: 1em;
     text-align: justify;
     line-height: 150%;
+  }
+
+  iframe {
+    width: 100%;
   }
 
   // Setting font sizes/colors and padding for news articles

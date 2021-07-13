@@ -281,7 +281,7 @@ a:hover {
   }
 }
 
-#sponsors {
+.sponsors {
   background-color: $sesa-navy;
 
   .sponsors-inner {
@@ -746,20 +746,20 @@ a:hover {
       }
     }
   }
-  
-  // Normalises the width of content in pages
-  .page-content {
-    width: 80%;
-    max-width: 960px;
-  }
+}
 
-  // This class is used by the pagination buttons/links at the bottom of a paginated page
-  .pagination {
-    padding: 2em 0;
-  }
+// Normalises the width of content in pages
+.page-content {
+  width: 80%;
+  max-width: 960px;
+}
 
-  // This class is used by images in articles/posts
-  .responsive {
-    width: 100%;
-  }
+// This class is used by the pagination buttons/links at the bottom of a paginated page
+.pagination {
+  padding: 2em 0;
+}
+
+// This class is used by images in articles/posts
+.responsive {
+  width: 100%;
 }

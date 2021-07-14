@@ -97,19 +97,19 @@ title: SESA - Home
               </p>
               <a href="/join" class="button-link"><div class="join">Join Now</div></a>
             </section>
-            </div>
-
+          </div>
+          <hr>
           <section class="home-post page-content">
             <h2 class="section-title news-title">
-              <a name="news" href="#news">Latest News</a>
+              <a name="news" href="/news">Latest News</a>
             </h2>
             {% assign article = site.posts.first %} {% include article.html %}
-
-            <a class="news-more" href="/news">More news <i class="fa fa-arrow-right"></i></a>
+            <hr>
+            <a class="news-more" href="/news">More news &nbsp;<i class="fa fa-arrow-right"></i></a>
           </section>
         </div>
       </section>
-
+      
       {% include footer.html %}
     </main>
     <script src="/js/main.js"></script>

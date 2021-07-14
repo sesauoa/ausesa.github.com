@@ -481,6 +481,7 @@ a:hover {
 // Normalises the width of content in pages
 .page-content {
   max-width: 960px;
+  width: 100%;
 
   p {
     padding-bottom: 1em;
@@ -491,28 +492,33 @@ a:hover {
   iframe {
     width: 100%;
   }
+}
 
-  // Setting font sizes/colors and padding for news articles
-  .news-post {
-    padding: 2em 0;
-    border-bottom: solid 1px lightgray;
+// Setting font sizes/colors and padding for news articles
+.news-post {
+  padding: 2em 0;
+  border-bottom: solid 1px lightgray;
 
-    .news-title {
-      font-size: 2em;
-    }
+  .news-title {
+    font-size: 2em;
+  }
 
-    :is(h1, h2, h3, h4, h5, h6) {
-      padding: 0.5em 0;
-      color: rgba(0, 0, 0, 0.8);
-    }
+  :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.5em 0;
+    color: rgba(0, 0, 0, 0.8);
+  }
 
-    ul {
-      margin-left: 1em;
-    }
+  ul {
+    margin-left: 2em;
+    line-height: 150%;
+    margin-bottom: 1em;
+  }
 
-    img {
-      margin: 1em 0;
-    }
+  img {
+    margin: 1em 0;
+    height: 400px;
+    width: auto;
+    border: 1px solid black;
   }
 }
 

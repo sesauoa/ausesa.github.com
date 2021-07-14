@@ -516,8 +516,9 @@ a:hover {
 
   img {
     margin: 1em 0;
-    height: 400px;
+    max-height: 400px;
     width: auto;
+    max-width: 100%;
     border: 1px solid black;
   }
 }

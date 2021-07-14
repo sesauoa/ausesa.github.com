@@ -405,18 +405,22 @@ a:hover {
 
 // Used for containers of page content in the homepage and news page
 .body-container {
-  padding: 4em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   display: flex;
-  gap: 3em;
+  gap: 1em;
+
+  hr {
+    width: 100%;
+  }
 
   .double-column {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
+    margin-bottom: 1em;
 
     @media #{$medium-display} {
       flex-direction: column;
@@ -424,7 +428,7 @@ a:hover {
     }
 
     .column {
-      width: 40%;
+      width: 48%;
 
       @media #{$medium-display} {
         width: 100%;
@@ -444,6 +448,10 @@ a:hover {
   p {
     text-align: justify;
     padding-bottom: 1em;
+  }
+
+  hr {
+    margin-bottom: 1em;
   }
 
   .button-link {
@@ -496,7 +504,6 @@ a:hover {
 
 // Setting font sizes/colors and padding for news articles
 .news-post {
-  padding: 2em 0;
   border-bottom: solid 1px lightgray;
 
   .news-title {
@@ -504,7 +511,7 @@ a:hover {
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    padding: 0.5em 0;
+    padding: 0.3em 0;
     color: rgba(0, 0, 0, 0.8);
   }
 
@@ -521,11 +528,18 @@ a:hover {
     max-width: 100%;
     border: 1px solid black;
   }
+  .news-content {
+    p:last-child {
+      margin-bottom: 1em;
+    }
+  }
 }
 
 // This class is used by the pagination buttons/links at the bottom of a paginated page
 .pagination {
-  padding: 2em 0;
+  padding: 1em 0;
+  display: flex;
+  gap: 1em;
 }
 
 // This class is used by images in articles/posts
@@ -715,7 +729,7 @@ a:hover {
 .opportunities-list {
   margin: 50px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: space-between;
   gap: 40px;
 

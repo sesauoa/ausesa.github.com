@@ -20,6 +20,7 @@ $large-display: "(max-width: #{$breakpoint-large})";
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   &::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -227,7 +228,7 @@ a:hover {
 
     .content {
       padding-top: 120px;
-      padding-bottom: 200px;
+      padding-bottom: 130px;
       width: 70%;
       display: flex;
       flex-direction: column;
@@ -236,7 +237,8 @@ a:hover {
 
       .title {
         color: $sesa-teal-light;
-        font-size: 5rem;
+        font-size: 4rem;
+        line-height: 1.2em;
       }
 
       .description {
@@ -549,7 +551,7 @@ a:hover {
 
 // Styling for the footer
 .footer {
-  $footer-vertical-padding: 2.5em;
+  $footer-vertical-padding: 1.5em;
   background-color: $sesa-navy;
   padding: $footer-vertical-padding 160px;
 

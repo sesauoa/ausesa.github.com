@@ -17,6 +17,13 @@ $small-display: "(max-width: #{$breakpoint-small})";
 $medium-display: "(max-width: #{$breakpoint-medium})";
 $large-display: "(max-width: #{$breakpoint-large})";
 
+// Left and right margins/padding
+$margin-large-display: 160px;
+$margin-medium-small-display: 24px;
+
+// For larger screens > 1920px wide
+$max-content-width: 1920px;
+
 * {
   margin: 0;
   padding: 0;
@@ -61,13 +68,13 @@ a:hover {
 
 // Shared padding between splash and page nav
 .nav-container {
-  padding: 20px 160px;
+  padding: 20px $margin-large-display;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: $max-content-width;
 
   @media #{$large-display} {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: $margin-medium-small-display;
+    padding-right: $margin-medium-small-display;
   }
 }
 
@@ -164,7 +171,7 @@ a:hover {
       align-items: flex-end;
       position: fixed;
       top: 0;
-      padding: 70px 70px;
+      padding: 70px $margin-medium-small-display;
       height: 100%;
       background-color: black;
       display: none;
@@ -218,7 +225,6 @@ a:hover {
   background-blend-mode: overlay;
   min-height: 100vh;
   width: 100%;
-  font-family: Overpass;
 
   .splash-container {
     left: 100%;
@@ -250,8 +256,8 @@ a:hover {
     }
 
     @media #{$large-display} {
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-left: $margin-medium-small-display;
+      padding-right: $margin-medium-small-display;
 
       .content {
         width: 100%;
@@ -272,8 +278,6 @@ a:hover {
     }
 
     @media #{$small-display} {
-      padding-left: 70px;
-      padding-right: 70px;
       .content {
         .title {
           font-size: 2.6rem;
@@ -553,13 +557,13 @@ a:hover {
 .footer {
   $footer-vertical-padding: 1.5em;
   background-color: $sesa-navy;
-  padding: $footer-vertical-padding 160px;
+  padding: $footer-vertical-padding $margin-large-display;
 
   .footer-content-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1920px;
+    max-width: $max-content-width;
     margin: 0 auto;
 
     .logo-container {
@@ -597,8 +601,8 @@ a:hover {
   }
 
   @media #{$large-display} {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: $margin-medium-small-display;
+    padding-right: $margin-medium-small-display;
   }
 }
 
@@ -634,8 +638,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding: 0 160px;
-    width: 1920px;
+    padding: 0 $margin-large-display;
+    width: $max-content-width;
 
     @media #{$large-display} {
       padding: 0;
@@ -643,8 +647,8 @@ a:hover {
   }
 
   @media #{$large-display} {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: $margin-medium-small-display;
+    margin-right: $margin-medium-small-display;
   }
 
   @media #{$medium-display} {

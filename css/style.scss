@@ -511,6 +511,7 @@ a:hover {
 // Setting font sizes/colors and padding for news articles
 .news-post {
   border-bottom: solid 1px lightgray;
+  overflow-wrap: anywhere;
 
   .news-title {
     font-size: 2em;
@@ -639,7 +640,6 @@ a:hover {
     flex-direction: column;
     align-content: center;
     padding: 0 $margin-large-display;
-    width: $max-content-width;
 
     @media #{$large-display} {
       padding: 0;

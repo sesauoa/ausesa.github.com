@@ -629,7 +629,6 @@ a:hover {
 
 .page-container {
   margin: 40px auto;
-  display: flex;
   justify-content: center;
   h1 {
     color: $sesa-teal-light;
@@ -667,25 +666,29 @@ a:hover {
 
 .cal-flexbox {
   display: flex;
-  gap: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   main,
   aside {
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    
     border-top: 5px solid $sesa-teal-dark;
-    border-radius: 5px 3px 0 0;
 
     h2 {
       line-height: 32pt;
       text-align: center;
       font-size: 14pt;
       background-color: #f0f0f0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
 
   main {
     width: 70%;
+    // Collapse border between main and aside
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   aside {
@@ -720,6 +723,8 @@ a:hover {
   }
 
   @media #{$small-display} {
+    border-radius: 8px;
+
     main {
       // Hide monthly view, only show agenda
       display: none;

@@ -32,9 +32,9 @@ Thanks all! 💥
 </div>
 
 <!-- 
-### Exec for 2021
+### Exec for 2022
 
--   Daniel Lee
+-   Daniel Li
 -   Matthew Jakeman
 -   Rawiri Hohepa
 -   Raina Song

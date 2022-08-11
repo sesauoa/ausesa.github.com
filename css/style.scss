@@ -554,6 +554,11 @@ a:hover {
   width: 100%;
 }
 
+// This class is used by smaller images in articles/posts
+.responsive-small {
+  width: 300px !important;
+}
+
 // Styling for the footer
 .footer {
   $footer-vertical-padding: 1.5em;

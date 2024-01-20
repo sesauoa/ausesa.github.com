@@ -806,7 +806,18 @@ a:hover {
   height: 100%;
 }
 
-.executive .info {
+.executive:hover .info {
+  opacity: 1;
+}
+
+.executives-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.info {
   position: absolute;
   top: 0;
   left: 0;
@@ -815,12 +826,14 @@ a:hover {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding: 20px; /* adjust as needed */
 }
 
-.executive:hover .info {
-  opacity: 1;
+.info p {
+  margin: 0;
 }

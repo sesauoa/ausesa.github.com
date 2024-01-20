@@ -3,20 +3,26 @@ var executives = [
   ];
   
 function mapExecutivesToHTML() {
-var pageContentDiv = document.querySelector('.page-content');
+  var pageContentDiv = document.querySelector('.page-content');
 
-executives.forEach(function(executive) {
-    var executiveDiv = document.createElement('div');
-    var img = document.createElement('img');
-    img.src = executive.imageURL;
-    var p = document.createElement('p');
-    p.textContent = executive.name + ', ' + executive.role;
+  executives.forEach(function(executive) {
+      var executiveDiv = document.createElement('div');
+      executiveDiv.className = 'executive';
 
-    executiveDiv.appendChild(img);
-    executiveDiv.appendChild(p);
+      var img = document.createElement('img');
+      img.src = executive.imageURL;
 
-    pageContentDiv.appendChild(executiveDiv);
-});
+      var infoDiv = document.createElement('div');
+      infoDiv.className = 'info';
+      var p = document.createElement('p');
+      p.textContent = executive.name + ', ' + executive.role;
+      infoDiv.appendChild(p);
+
+      executiveDiv.appendChild(img);
+      executiveDiv.appendChild(infoDiv);
+
+      pageContentDiv.appendChild(executiveDiv);
+  });
 }
   
 mapExecutivesToHTML();

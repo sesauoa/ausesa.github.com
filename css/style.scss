@@ -793,3 +793,34 @@ a:hover {
     }
   }
 }
+
+.executive {
+  position: relative;
+  width: 200px; /* adjust as needed */
+  height: 200px; /* adjust as needed */
+  overflow: hidden;
+}
+
+.executive img {
+  width: 100%;
+  height: 100%;
+}
+
+.executive .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.executive:hover .info {
+  opacity: 1;
+}

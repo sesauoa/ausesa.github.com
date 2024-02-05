@@ -496,6 +496,7 @@ a:hover {
     .join {
       text-align: center;
       width: max-content;
+      cursor: pointer;
 
       &:hover {
         transition: ease-in 0.2s;
@@ -882,5 +883,33 @@ a:hover {
 
   .info {
     font-size: 0.7rem;
+  }
+}
+
+.sponsor-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  // border-radius: 20px;
+  // padding: 50px 40px;
+
+  .link {
+    button {
+      background-color: $sesa-teal-light;
+      border: none;
+      padding: 10px 25px 8px 25px;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    &:hover {
+      transition: ease-in 0.2s;
+      transform: scale(1.05);
+    }
   }
 }

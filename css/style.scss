@@ -89,6 +89,7 @@ a:hover {
   }
 
   .nav-bar {
+    padding-left: 3rem;
     display: flex;
     align-items: center;
 
@@ -791,5 +792,71 @@ a:hover {
         transform: scale(1.05);
       }
     }
+  }
+}
+
+.executive {
+  position: relative;
+  width: 225px; /* adjust as needed */
+  height: 225px; /* adjust as needed */
+  overflow: hidden;
+}
+
+.executive img {
+  width: 100%;
+  height: 100%;
+}
+
+.executive:hover .info {
+  opacity: 1;
+}
+
+.executives-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px; /* adjust as needed */
+}
+
+.info p {
+  margin: 0;
+}
+
+@media screen and (max-width: 470px) {
+  .executive {
+    width: 150px; /* adjust as needed */
+    height: 150px; /* adjust as needed */
+  }
+
+  .info {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .executive {
+    width: 130px; /* adjust as needed */
+    height: 130px; /* adjust as needed */
+  }
+
+  .info {
+    font-size: 0.7rem;
   }
 }

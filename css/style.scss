@@ -838,3 +838,25 @@ a:hover {
 .info p {
   margin: 0;
 }
+
+@media screen and (max-width: 470px) {
+  .executive {
+    width: 150px; /* adjust as needed */
+    height: 150px; /* adjust as needed */
+  }
+
+  .info {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .executive {
+    width: 130px; /* adjust as needed */
+    height: 130px; /* adjust as needed */
+  }
+
+  .info {
+    font-size: 0.7rem;
+  }
+}

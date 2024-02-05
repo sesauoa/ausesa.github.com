@@ -6,9 +6,9 @@ var executives = [
     { name: 'GRACE KERR', role: 'Women\'s Representative', imageURL: '/img/execs/gracek.JPG' },
     { name: 'JAMIE LEE', role: 'Secretary', imageURL: '/img/execs/jamiel.jpeg' },
     { name: 'ANDY ZHANG', role: 'Marketing Manager', imageURL: '/img/execs/andyz.jpg' },
+    { name: 'ADITYA SOHANI', role: 'Marketing Manager', imageURL: '/img/execs/aditya.jpg' },
     { name: 'ALEX LIANG', role: 'Industry Event Lead', imageURL: '/img/execs/alexl.jpeg' },
     { name: 'ALEX HOPE', role: 'Social Event Lead', imageURL: '/img/execs/alexh.jpg' },
-    { name: 'ADITYA SOHANI', role: 'Marketing', imageURL: '/img/execs/aditya.jpg' },
     { name: 'SUNNY SETIA', role: 'Industry Event Co-ordinator', imageURL: '/img/execs/sunnys.jpeg' },
   ];
   

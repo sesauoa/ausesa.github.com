@@ -226,6 +226,31 @@ a:hover {
   min-height: 100vh;
   width: 100%;
 
+  .background-container {
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+  }
+
+  .background {
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .showing {
+    opacity: 1;
+    z-index: -1;
+    transition: none;
+  }
+
   .splash-container {
     left: 100%;
     display: flex;
@@ -858,29 +883,4 @@ a:hover {
   .info {
     font-size: 0.7rem;
   }
-}
-
-.background-container {
-  position: absolute;
-  object-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  z-index: -5;
-}
-
-.background {
-  position: absolute;
-  object-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.showing {
-  opacity: 1;
-  z-index: -1;
-  transition: none;
 }

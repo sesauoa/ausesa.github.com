@@ -513,6 +513,7 @@ a:hover {
 
     .news-title {
       font-size: 1.2em;
+      padding-bottom: 0.5em
     }
   }
 }
@@ -530,40 +531,6 @@ a:hover {
 
   iframe {
     width: 100%;
-  }
-}
-
-// Setting font sizes/colors and padding for news articles
-.news-post {
-  border-bottom: solid 1px lightgray;
-  overflow-wrap: anywhere;
-
-  .news-title {
-    font-size: 2em;
-  }
-
-  :is(h1, h2, h3, h4, h5, h6) {
-    padding: 0.3em 0;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  ul {
-    margin-left: 2em;
-    line-height: 150%;
-    margin-bottom: 1em;
-  }
-
-  img {
-    margin: 1em 0;
-    max-height: 400px;
-    width: auto;
-    max-width: 100%;
-    border: 1px solid black;
-  }
-  .news-content {
-    p:last-child {
-      margin-bottom: 1em;
-    }
   }
 }
 

@@ -1,14 +1,15 @@
 var executives = [
     { name: 'Tony Lim', role: 'President', imageURL: '/img/execs/tonyl.jpg' },
-    { name: 'Aditya Mane', role: 'Vice President', imageURL: '/img/execs/aditya.jpg' },
+    { name: 'Adwait Mane', role: 'Vice President', imageURL: '/img/execs/adwait.jpg' },
     { name: 'Victor Qiu', role: 'Sponsorship Manager', imageURL: '/img/execs/victorq.jpg' },
     { name: 'Varshil Patel', role: 'Treasurer', imageURL: '/img/execs/varshil.JPG' },
     { name: 'Grace Kerr', role: 'Women\'s Representative', imageURL: '/img/execs/gracek.JPG' },
     { name: 'Jamie Lee', role: 'Secretary', imageURL: '/img/execs/jamiel.jpeg' },
     { name: 'Andy Zhang', role: 'Marketing Manager', imageURL: '/img/execs/andyz.jpg' },
     { name: 'Alex Liang', role: 'Industry Event Lead', imageURL: '/img/execs/alexl.jpeg' },
-    { name: 'Sunny Sepia', role: 'Industry Event Co-ordinator', imageURL: '/img/execs/sunnys.jpeg' },
     { name: 'Alex Hope', role: 'Social Event Lead', imageURL: '/img/execs/alexh.jpg' },
+    { name: 'Aditya Sohani', role: 'Marketing', imageURL: '/img/execs/aditya.jpg' },
+    { name: 'Sunny Sepia', role: 'Industry Event Co-ordinator', imageURL: '/img/execs/sunnys.jpeg' },
   ];
   
 function mapExecutivesToHTML() {
@@ -52,7 +53,7 @@ function mapExecutivesToHTML() {
   });
   
   pageContentDiv.appendChild(executivesContainer);
-  pageContentDiv.appendChild(descriptionContainer);
+  // pageContentDiv.appendChild(descriptionContainer);
 }
   
 mapExecutivesToHTML();

@@ -537,21 +537,9 @@ a:hover {
   }
 }
 
-// This class is used by the pagination buttons/links at the bottom of a paginated page
-.pagination {
-  padding: 1em 0;
-  display: flex;
-  gap: 1em;
-}
-
-// This class is used by images in articles/posts
-.responsive {
-  width: 100%;
-}
-
-// This class is used by smaller images in articles/posts
-.responsive-small {
-  width: 300px !important;
+// Embedded Facebook feed 
+.lastest-news {
+  max-width: 960px;
 }
 
 // Styling for the footer

@@ -793,10 +793,7 @@ a:hover {
 
 .executive:hover .info {
   opacity: 1;
-}
-
-.executive:active .info {
-  opacity: 1;
+  cursor: default;
 }
 
 .executives-container {
@@ -821,6 +818,10 @@ a:hover {
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 20px; /* adjust as needed */
+}
+
+.show-info {
+  opacity: 1;
 }
 
 .info p {

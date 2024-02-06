@@ -11,22 +11,21 @@ var executives = [
     { name: 'ADITYA SOHANI', role: 'Marketing Manager', imageURL: '/img/execs/aditya.jpg' },
     { name: 'SUNNY SETIA', role: 'Industry Event Co-ordinator', imageURL: '/img/execs/sunnys.jpeg' },
   ];
+
+// Mobile touch events
+document.querySelectorAll('.executive').forEach(function(executive) {
+  executive.addEventListener('touchstart', function() {
+    this.classList.add('active');
+  });
+
+  executive.addEventListener('touchend', function() {
+    this.classList.remove('active');
+  });
+});
   
 function mapExecutivesToHTML() {
   var pageContentDiv = document.querySelector('.page-content');
-  pageContentDiv.className = 'parent-container';
-
-  // Mobile touch events
-  document.querySelectorAll('.executive').forEach(function(executive) {
-    executive.addEventListener('touchstart', function() {
-      this.classList.add('active');
-    });
-  
-    executive.addEventListener('touchend', function() {
-      this.classList.remove('active');
-    });
-  });
-  
+  pageContentDiv.className = 'parent-container'; 
 
   var executivesContainer = document.createElement('div');
   executivesContainer.className = 'executives-container';

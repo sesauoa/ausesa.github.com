@@ -795,6 +795,10 @@ a:hover {
   opacity: 1;
 }
 
+.executive:active .info {
+  opacity: 1;
+}
+
 .executives-container {
   display: flex;
   flex-wrap: wrap;
@@ -829,10 +833,6 @@ a:hover {
     height: 150px; /* adjust as needed */
   }
 
-  .executive:active .info {
-    opacity: 1;
-  }
-
   .info {
     font-size: 0.8rem;
   }
@@ -842,10 +842,6 @@ a:hover {
   .executive {
     width: 130px; /* adjust as needed */
     height: 130px; /* adjust as needed */
-  }
-
-  .executive:active .info {
-    opacity: 1;
   }
 
   .info {

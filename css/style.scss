@@ -1,6 +1,8 @@
 ---
 ---
 
+// NOTE: If CSS not working, try clear cache & browsing data
+
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 // Colours
@@ -827,8 +829,12 @@ a:hover {
     height: 150px; /* adjust as needed */
   }
 
+  .executive:active .info {
+    opacity: 1;
+  }
+
   .info {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -838,8 +844,12 @@ a:hover {
     height: 130px; /* adjust as needed */
   }
 
+  .executive:active .info {
+    opacity: 1;
+  }
+
   .info {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 

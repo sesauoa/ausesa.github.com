@@ -1,20 +1,32 @@
 var executives = [
     { name: 'TONY LIM', role: 'President', imageURL: '/img/execs/tonyl.jpg' },
     { name: 'ADWAIT MANE', role: 'Vice President', imageURL: '/img/execs/adwait.jpg' },
-    { name: 'VICTOR QIU', role: 'Sponsorship Manager', imageURL: '/img/execs/victorq.jpg' },
     { name: 'VARSHIL PATEL', role: 'Treasurer', imageURL: '/img/execs/varshil.JPG' },
-    { name: 'GRACE KERR', role: 'Women\'s Representative', imageURL: '/img/execs/gracek.JPG' },
     { name: 'JAMIE LEE', role: 'Secretary', imageURL: '/img/execs/jamiel.jpeg' },
-    { name: 'ANDY ZHANG', role: 'Marketing Manager', imageURL: '/img/execs/andyz.jpg' },
-    { name: 'ADITYA SOHANI', role: 'Marketing Manager', imageURL: '/img/execs/aditya.jpg' },
     { name: 'ALEX LIANG', role: 'Industry Event Lead', imageURL: '/img/execs/alexl.jpeg' },
     { name: 'ALEX HOPE', role: 'Social Event Lead', imageURL: '/img/execs/alexh.jpg' },
+    { name: 'VICTOR QIU', role: 'Sponsorship Manager', imageURL: '/img/execs/victorq.jpg' },
+    { name: 'GRACE KERR', role: 'Women\'s Representative', imageURL: '/img/execs/gracek.JPG' },
+    { name: 'ANDY ZHANG', role: 'Marketing Manager', imageURL: '/img/execs/andyz.jpg' },
+    { name: 'ADITYA SOHANI', role: 'Marketing Manager', imageURL: '/img/execs/aditya.jpg' },
     { name: 'SUNNY SETIA', role: 'Industry Event Co-ordinator', imageURL: '/img/execs/sunnys.jpeg' },
   ];
   
 function mapExecutivesToHTML() {
   var pageContentDiv = document.querySelector('.page-content');
   pageContentDiv.className = 'parent-container';
+
+  // Mobile touch events
+  document.querySelectorAll('.executive').forEach(function(executive) {
+    executive.addEventListener('touchstart', function() {
+      this.classList.add('active');
+    });
+  
+    executive.addEventListener('touchend', function() {
+      this.classList.remove('active');
+    });
+  });
+  
 
   var executivesContainer = document.createElement('div');
   executivesContainer.className = 'executives-container';

@@ -489,6 +489,10 @@ a:hover {
     margin-bottom: 1em;
   }
 
+  .join-div {
+    width: max-content;
+  }
+
   .button-link {
     color: white;
     font-size: 1.1rem;
@@ -499,7 +503,6 @@ a:hover {
 
     .join {
       text-align: center;
-      width: max-content;
       cursor: pointer;
 
       &:hover {

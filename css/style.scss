@@ -366,6 +366,7 @@ a:hover {
       .sponsors-flowbox {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: 10px 30px;
 
         .gold-sponsor {

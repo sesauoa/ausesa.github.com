@@ -1,5 +1,7 @@
-# ausesa.github.com
+# ausesa.github.com (Depricated)
 Software Engineering Students Association Website, http://sesa.org.nz/
+
+New repository: https://github.com/sesauoa/sesa.org.nz
 
 ## To run locally
 

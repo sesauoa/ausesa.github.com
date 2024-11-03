@@ -1,4 +1,4 @@
-# ausesa.github.com (Depricated)
+# ausesa.github.com (Deprecated)
 Software Engineering Students Association Website, http://sesa.org.nz/
 
 New repository: https://github.com/sesauoa/sesa.org.nz
